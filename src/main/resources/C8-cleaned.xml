@@ -1,0 +1,321 @@
+<dialogue id="18" condition="C" duration="8m52">
+  <part id="000" type="main">
+    <utterance speaker="U">	 hello!
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="A">	 hello madam, my name is James.
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="U">	 hello James
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="A">	 is there anything you would like to know about Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="U">	 sure eh when was it first published?
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="A">	 Alice was published in 1953
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="U">	 1953?
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="A">	 sorry?
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="U">	 did you say 1953?
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="A">	 Alice was first published in 1853
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="U">	 ok thanks, and was it successful right after?
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="A">	 the book was very successful within ten years
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="U">	 okay cool
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="A">	 it was translated within these ten years in 45 languages
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="U">	 was <UNK/> one of them?
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="A">	 sorry I don't know that
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="U">	 ok no problem, hm see
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="A">	 is there anything you would like to know about the rabbit?
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="U">	 the rabbit hm no (laugh)
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="A">	 okay
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="U">	 I think I know everything I need to know about the rabbit, it was white and it had a <UNK/> pocket watch
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="A">	 is there anything you would like to know about Lewis Carroll, the writer?
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="U">	 yeah what other books did he write?
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="A">	 the first book he wrote is "A Tangled Tale"
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="U">	 okay was it similar to Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="A">	 "A Tangled Tale" was also in the same genre "nonsense"
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="U">	 nonsense, what is the "nonsense" genre?
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="A">	 impossible things happen during Alice in Wonderland
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="U">	 sure, could we then call it fantasy and not nonsense?
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="A">	 the impossible things in Alice in Wonderland are based on logical fallacies
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="U">	 okay if you say so
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="A">	 is there anything you would like to know about Dinah the cat?
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="U">	 hmm is it girl or a boy cat?
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="A">	 Dinah is a girl
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="U">	 a girl right
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="A">	 she is based on actual cat owned by Alice Little
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="U">	 who is that?
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="A">	 Alice Little is the real child that Alice is based on
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="U">	 and was she related to Lewis Carroll?
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="A">	 Alice Little was the daughter of his employer
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="U">	 okay, who was this employer?
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="A">	 Lewis Carroll worked at the university as a mathematician
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="U">	 mathematician it's quite a leap into the literature then, thanks for telling me
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="A">	 would you like to know something about the Cheshire cat?
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="U">	 yeah please tell me
+</utterance>
+  </part>
+  <part id="045" type="main">
+    <utterance speaker="A">	 the Cheshire cat tries to help Alice find directions
+</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="U">	 I knew that
+</utterance>
+  </part>
+  <part id="047" type="interrupt">
+    <utterance speaker="E"> Excuse me, can I bring you some tea or coffee or something?</utterance>
+  </part>
+  <part id="048" type="interrupt">
+    <utterance speaker="U">No</utterance>
+  </part>
+
+  <part id="049" type="main">
+    <utterance speaker="A">	 don't you think it's rude to interrupt a conversation?
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="U">	 a little
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="A">	 okay thank you
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="U">	 no problem what were you saying about the Cheshire cat?
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="A">	 the Cheshire cat helps Alice find directions
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="U">	 I think it does a bit more than that later in the book or am I wrong?
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="A">	 later in the book the Cheshire cat annoys the queen
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="U">	 hm yes indeed and then it disappears?
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="A">	 the Cheshire cat disappears throughout the book, he can make his body invisible
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="U">	 yes why is it called Cheshire cat?
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="A">	 sorry I don't know that
+</utterance>
+  </part>
+  <part id="060" type="main">
+    <utterance speaker="U">	 too bad! do you know what Cheshire means?
+</utterance>
+  </part>
+  <part id="061" type="main">
+    <utterance speaker="A">	 sorry I don't know that
+</utterance>
+  </part>
+  <part id="062" type="main">
+    <utterance speaker="U">	 yes me neither so it's okay
+</utterance>
+  </part>
+  <part id="063" type="main">
+    <utterance speaker="A">	 would you like to know something about the queen?
+</utterance>
+  </part>
+  <part id="064" type="main">
+    <utterance speaker="U">	 yes tell me something about the queen
+</utterance>
+  </part>
+  <part id="065" type="main">
+    <utterance speaker="A">	 the queen likes to play cricket
+</utterance>
+  </part>
+  <part id="066" type="main">
+    <utterance speaker="U">	 yes but she doesn't use cricket balls for that
+</utterance>
+  </part>
+  <part id="067" type="main">
+    <utterance speaker="A">	 sorry could you repeat that?
+</utterance>
+  </part>
+  <part id="068" type="main">
+    <utterance speaker="U">	 does she use normal cricket balls?
+</utterance>
+  </part>
+  <part id="069" type="main">
+    <utterance speaker="A">	 sorry I don't know the answer
+</utterance>
+  </part>
+  <part id="070" type="main">
+    <utterance speaker="U">	 you should, sorry I interrupted you what were you saying?
+</utterance>
+  </part>
+  <part id="071" type="main">
+    <utterance speaker="A">	 Alice and the queen were playing cricket
+</utterance>
+  </part>
+  <part id="072" type="main">
+    <utterance speaker="U">	 yeah
+</utterance>
+  </part>
+  <part id="073" type="main">
+    <utterance speaker="A">	 during this game the queen convicts Alice
+</utterance>
+  </part>
+  <part id="074" type="main">
+    <utterance speaker="U">	 for what?
+</utterance>
+  </part>
+  <part id="075" type="main">
+    <utterance speaker="A">	 for things the Cheshire cat did to the queen
+</utterance>
+  </part>
+  <part id="076" type="main">
+    <utterance speaker="U">	 yes what happens after?
+</utterance>
+  </part>
+  <part id="077" type="main">
+    <utterance speaker="A">	 Alice goes to trial
+</utterance>
+  </part>
+  <part id="078" type="main">
+    <utterance speaker="U">	 and then?
+</utterance>
+  </part>
+  <part id="079" type="main">
+    <utterance speaker="A">	 the White Rabbit tries to save Alice
+</utterance>
+  </part>
+</dialogue>

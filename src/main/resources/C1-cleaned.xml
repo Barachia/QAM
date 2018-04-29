@@ -1,0 +1,276 @@
+<dialogue id="11" condition="C" duration="8m38">
+  <part id="000" type="main">
+    <utterance speaker="A">	 Hello madam, my name is James
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="U">	 Hello, my name is <name/>
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="A">	 I know everything about Alice in Wonderland. Is there anything you like to know?
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="U">	 No
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="A">	 Is there anything you like to know about the author?
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="U">	 Yes, about the author I would like to know.
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="A">	 The author is Lewis Carroll. His penname is Charles Dodgson. He wrote Alice in Wonderland in 1952.
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="U">	 Interesting...
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="A">	 Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="U">	 Yes, how did he come with the idea of Alice?
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="A">	 Sorry, I cannot understand you.
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="U">	 How did he come up with the idea of Alice?
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="A">	 He wrote the story for a child friend of his, named Alice Little.
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="U">	 Nice.
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="A">	 Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="U">	 No.
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="A">	 Would you like to know something about the rabbit?
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="U">	 Yes, why not?
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="A">	 The rabbit is actually called White Rabbit. Later during the book he thinks Alice is his housemaid. Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="U">	 I would like to know about the cat.
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="A">	 Sorry, I cannot uderstand you.
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="U">	 I would like to know about the cat.
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="A">	 The cat. Would you like to know about Dinah?
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="U">	 Yes
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="A">	 Dinah is based on the actual cat owned by Alice Little.
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="U">	 Ok.
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="A">	 Would you like to know something about Alice?
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="U">	 Yes.
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="A">	 Alice is 8 years old. She owns a cat named Dinah. She is both curious and rational during the events in this book. Is there something you like to know about cat eating bats?
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="U">	 Yes, that would be interesting.
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="A">	 Cats sometimes catch bats, which they then eat.
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="U">	 Ok.
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="A">	 Is there something else you'd like to ask?
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="U">	 No.
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="A">	 Is there something you'd like to know about the caterpillar?
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="U">	 About who?
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="A">	 The caterpillar is a character described later during the book.
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="U">	 Yes, I would like to know about it.
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="A">	 The caterpillar keeps asking who Alice is.
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="U">	 What does he say as a reply?
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="A">	 Alice won't answer that question.
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="U">	 Why not?
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="A">	 Because the caterpillar is being rude. Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="U">	 Yes, who is the friend of Alice during the story?
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="A">	 Could you repeat that question please?
+</utterance>
+  </part>
+  <part id="045" type="interrupt">
+    <utterance speaker="E">I'm sorry. You told me it's not tea you wnated?</utterance>
+  </part>
+  <part id="046" type="interrupt">
+    <utterance speaker="U">No, no, I don't want tea</utterance>
+  </part>
+  <part id="047" type="interrupt">
+    <utterance speaker="E">I'm sorry.</utterance>
+  </part>
+
+  <part id="048" type="main">
+    <utterance speaker="A">	 Don't you think it's rude to interrupt a conversation?
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="U">	 I'm sorry.
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="A">	 Ok, thank you. Is there something you would like to know about Lewis Carroll?
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="U">	 Yes, you can tell me about Lewis.
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="A">	 Lewis Carroll wrote 12 books in total. His third book was Alice's Adventures in Wonderland, the book you just read.
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="U">	 Ok, what was his first book?
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="A">	 His first book was a Tangled Tale.
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="U">	 What was it about?
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="A">	 Sorry, I don't know that.
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="U">	 What about his second book?
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="A">	 Sorry, I don't know anything about that.
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="U">	 So how does the story of Alice end?
+</utterance>
+  </part>
+  <part id="060" type="main">
+    <utterance speaker="A">	 Alice wonders if she was dreaming all the time or not. Is there something you'd like to know about the falling jar of marmelade?
+</utterance>
+  </part>
+  <part id="061" type="main">
+    <utterance speaker="U">	 Yes.
+</utterance>
+  </part>
+  <part id="062" type="main">
+    <utterance speaker="A">	 It is strange that a bottle of marmelade was falling faster than Alice herself. That is against the laws of physics.
+</utterance>
+  </part>
+  <part id="063" type="main">
+    <utterance speaker="U">	 True.
+</utterance>
+  </part>
+  <part id="064" type="main">
+    <utterance speaker="A">	 Lewis Carroll knew about this, since he was a mathematician.
+</utterance>
+  </part>
+  <part id="065" type="main">
+    <utterance speaker="U">	 Hmm. Yes, but I think it was in his imagniation. So everything could be contrary of the laws.
+</utterance>
+  </part>
+  <part id="066" type="main">
+    <utterance speaker="A">	 That is a valid point.
+</utterance>
+  </part>
+  <part id="067" type="main">
+    <utterance speaker="U">	 Okay. So why... did he point that out in his book?
+</utterance>
+  </part>
+  <part id="068" type="main">
+    <utterance speaker="A">	 Sorry, I could not get you.
+</utterance>
+  </part>
+</dialogue>

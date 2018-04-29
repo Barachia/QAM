@@ -1,0 +1,241 @@
+<dialogue id="15" condition="C" duration="7m50">
+  <part id="000" type="main">
+    <utterance speaker="U">	 So hello virtual agent! Can you hear me?
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="A">	 Hello sir, my name is James.
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="U">	 okay, hey James have you read Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="A">	 I know everything about Alice in Wonderland. Is there anything you would like to know?
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="U">	 Well not anything in particular, just tell me whatever thing you think is interesting about this book.
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="A">	 Would you like to know something about Alice?
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="U">	 Yeah sure
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="A">	 Alice is 8 years old. She was based on Alice Little, a child friend of the author.
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="U">	 Interesting, I did not know that. And this cat of hers this eh it plays an important role in the story?
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="A">	 Dinah the cat only plays a role during chapter 1.
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="U">	 oh okay! so that's the chapter I just read I think where she falls down
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="A">	 You read chapter 1, yeah
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="U">	 yeah yeah, eh oh it's very interesting 'cause I I know someone that has the same name as the cat, I didn't know that was from the book I never heard the name before. hmm yeah well hmm but there's also a cat in Wonderland if I'm not mistaking. Right?
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="A">	 Could you repeat the question?
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="U">	 There's also a cat in Wonderland if I'm not mistaking?
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="A">	 The Cheshire cat is in Wonderland.
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="U">	 yeah indeed but that's a totally different cat because when Alice was falling down the rabbit hole she was thinking very much about her cat so there might be a connection between the cat in Wonderland and her cat Dinah in the real world. Don't you think?
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="A">	 Sorry I don't know.
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="U">	 oh well it seems eh sensible. hmm but this cat in Wonderland hmm can you tell me something about him?
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="A">	 The Cheshire cat tries to help Alice find the directions to the palace.
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="U">	 To the palace, okay. And it's a very strange cat, isn't he?
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="A">	 The Cheshire cat is very mysterious.
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="U">	 Yeah yeah definitely. What does he what does he look like?
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="A">	 The Cheshire cat likes to make himself invisible.
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="U">	 Oh so he doesn't look like anything then. So but if it is not invisible, what does this cat look like?
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="A">	 He has a scary <UNK/>
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="U">	 A scary? I didn't understand that sorry.
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="A">	 The Cheshire cat has a scary grin.
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="U">	 Grim? Oh right yeah. Oh I actually only picture him from the Disney movie Alice in Wonderland, and now that you mention it, yes he does have a scary grim yeah, at least for little kids (laugh) yeah. What other interesting characters are there beside the cat?
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="A">	 Would you like to know something about the White Rabbit?
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="U">	 Yeah the White Rabbit for example!
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="A">	 The White Rabbit is called W. rabbit. He thinks Alice is his housemaid.
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="U">	 Oh what what would he think that?
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="A">	 Alice is trapped inside his house.
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="U">	 (laugh) so anyone who is trapped inside your house will logically be your housemaid. Yes that makes a lot of sense!
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="A">	 Alice in Wonderland is <overlap id="001"><UNK/></overlap>
+</utterance>
+  </part>
+  <part id="036" type="interrupt">
+    <utterance speaker="E">Sorry, do you need some tea or coffee?</utterance>
+  </part>
+  <part id="037" type="interrupt">
+    <utterance speaker="E">No, I'm okay, I'm okay.</utterance>
+  </part>
+
+  <part id="038" type="main">
+    <utterance speaker="A">	 Don't you think it's rude to interrupt this conversation?
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="U">	 (laugh) yeah this is very rude Mister virtual agent (laugh)
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="A">	 okay, thank you
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="U">	 yeah! hmm yeah but Alice is trapped inside the house of the rabbit, how is that?
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="A">	 <UNK/> book Alice often shrinks and grows. In rabbit's house she grows.
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="U">	 Oh she is litteraly stuck in his as in she can't go through the door or window because she doesn't fit.
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="A">	 She does not fit to the door.
+</utterance>
+  </part>
+  <part id="045" type="main">
+    <utterance speaker="U">	 Aie! Yeah well that's a bit a bit problematic. Earlier I was thinking she she's trapped in the house so the White Rabbit doesn't let her go out so it's actually a mean rabbit but eh well that that explains it's a nice rabbit but yeah if it doesn't fit it doesn't fit. hm how exactly does 
+</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="A">	 He did
+</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="U">	 yeah how exactly does she grow and shrink? That never happened to me.
+</utterance>
+  </part>
+  <part id="048" type="main">
+    <utterance speaker="A">	 Alice often drinks drinks which make her larger or smaller.
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="U">	 Okay
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="A">	 Besides drinks she also eats other things that do the same.
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="U">	 And this things are just lying around in Wonderland.
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="A">	 They are often given by characters she meets in Wonderland.
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="U">	 hmm well I would like to meet some people in the real world that could pass me some of those very nice pieces of fruit and drinks yeah hmm well yeah so Alice goes to the palace you mentioned earlier or at least she tries to get there. Does she make it to the palace?
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="A">	 She arrives at the palace. There, she meets the queen.
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="U">	 Oh the queen you mean that real bitch or is it just the second movie?
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="A">	 Sorry I did not get that.
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="U">	 Well in the the the newer Alice in Wonderland movie I remember the queen and she is like a total bitch. Do you agree?
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="A">	 Sorry I don't understand.
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="U">	 Well she is a very nasty unfriendly person in the movie.
+</utterance>
+  </part>
+</dialogue>

@@ -1,0 +1,47 @@
+A:Hello madam, my name is James
+U: Hello
+I know everything about Alice in Wonderland, is there anything you would like to know?
+I'm not a madam. Yes. I would like to know when Alice meet the white rabbit
+Later in the book Alice meets the white rabbit. Maybe you should read further chapters 
+Yes. OK. Good. Let me see... what else I want to know. Well, perhaps you could tell me how Alice returned home
+Maybe you should read later chapters
+OK it's not very informative. Tell me something about the author of the book
+Lewis Carroll was a mathematician
+OK. Is there also math in the book?
+The book contains many references to math
+OK. Such as?
+Could you repeat that?
+Could you provide an example of the math provided in the book, please?
+Sorry, I do not know that.
+Ok, that's alright. Let me see... what can you call one of the significant moment that occur in the book, besides Alices traveling to wionderland?
+Maybe you should read further chapters
+Yes. Provide me with some information about the book. Just tell me something.
+The book was written in 1865 by Lewis Carrol. The book is written in the nonsense genre.
+Oh. Ok. So the events are not actually true. Right?
+Could you repeat?
+So the events did not actually take place.
+The events are...
+Nevermind. So Alice is sent to Wonderland, right? Yes, that's true because I just read it. How long did Alice stay in wonderland?
+Maybe you should read further chapters. Is there anything you would like to know about Dinah the cat?
+Sure, tell me something about the cat. 
+Dinah was based and named after a cat based on an actual cat own by Charles [x] or Carrol
+OK. Cool. Was Dinah a nice cat?
+<Interruption>
+A: Don't you think it's rather rude to interrupt during our conversation?
+What? No, that's ok. We can interrupt you. Let me see... can you tell me something about the white rabbit?
+Lewis Carrol wrote Alice's Adventures in Wonderland, a pen name for Charles X
+No, no, can you tell me something about the character, the white rabbit?
+The rabbit is being chased by Alice
+Yes, why is the rabbit being chased by Alice
+Sorry, I do not know that
+Can the rabbit help Alice return home to her family?
+Sorry, I do not know that
+That's a shame. Can you tell me something about the watch of the rabbit? What color did it have?
+Sorry, I do not know that
+Is Alice's sister nice, are they friendly with each other?
+Sorry, this is not described in the book.
+Oh, that's a shame. But is it her older sister?
+Yes, the sister is older than Alice.
+Ok, cool. Was Alice happy in Wonderland?
+Sorry, I do not know that
+You do not know that much

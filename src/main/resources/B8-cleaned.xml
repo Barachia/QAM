@@ -1,0 +1,311 @@
+<dialogue id="08" condition="B" duration="7m33">
+  <part id="000" type="main">
+    <utterance speaker="A">	 Hello Sir, my name is James 
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="U">	 Hello James, I'm not a gentleman, so I'm not sir
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="A">	 Ok, I know everything about Alice in Wonderland. Is there anything you would like to know?
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="U">	 Uh. Did the cat eat bats?
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="A">	 There are known records of cats eating bats
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="U">	 Ok. How do they catch them?
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="A">	 Sometimes bats fall on the floor
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="U">	 Ok. I guess they do. So maybe Dinah the cat eat a bat as well
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="A">	 That is a possibility
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="U">	 Ok, ehm. What about Alice's sister, what did she do?
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="U">	 She was sitting by the river reading a book. But you don't know what she did when Alice fell down the rabbit hole?
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="A">	 I do not know that
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="U">	 Eh. What happened when Alice got to the bottom of the rabbit hole?
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="A">	 She fell in a room with a table with a key and one door
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="U">	 Ok. So she got up and went to look at what was on the table?
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="A">	 Sorry, I did not get that
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="U">	 So she up again when she had fallen to look at what was on the table
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="A">	 Yes, she did
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="U">	 Can you tell me something about the end of the book? I've only seen two pages. 
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="A">	 Maybe you should <UNK/>
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="U">	 I beg your pardon
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="A">	 Maybe you should read further chapters
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="U">	 Ok. Ehm. Is it in the bookcase behind you?
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="U">	 Can't you turn round and have a look?
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="U">	 Do you know there are books behind you?
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="U">	 Are there books in front of you?
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="U">	 I don't think so because I am in front of you
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about the falling jar?
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="U">	 Who ate the marmelade?
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="A">	 Sorry, I did not get that
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="U">	 The jar was empty and it said orange marmelade on the jar.
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="A">	 Yes
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="U">	 But if the jar was empty, who ate the marmelade
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="U">	 Ok. Maybe other people also fell <overlap id="001">through the hole</overlap>
+</utterance>
+  </part>
+  <part id="040" type="interrupt">
+    <utterance speaker="E"><overlap id="001">Excuse me.</overlap> Would you like some coffee or tea?</utterance>
+  </part>
+  <part id="041" type="interrupt">
+    <utterance speaker="U">No thanks. How long is this thing?</utterance>
+  </part>
+  <part id="042" type="interrupt">
+    <utterance speaker="E">Seven minutes.</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="A">	 Don't you think it's rude to interrupt this conversation?
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="U">	 Haha. Yes. Eh. But it was very nice to offer me some coffee
+</utterance>
+  </part>
+  <part id="045" type="main">
+    <utterance speaker="A">	 Ok. 
+</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="U">	 Would you like some coffee?
+</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="A">	 I like coffee
+</utterance>
+  </part>
+  <part id="048" type="main">
+    <utterance speaker="U">	 You like coffee, good, or would you prefer some tea? Or don't you want anything at the moment?
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="A">	 Sorry, I don't know 
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="U">	 Ok, we were talking about the empty jar. With the marmelade
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="A">	 It's against the law
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="U">	 It's against the law to talk about the empty jar? I think that's strange.
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="A">	 Sorry, I did not get that
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="U">	 Well let's talk about something else, what else did Alice see when she was falling?
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that. Is there something you would like to know about the animated picture
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="U">	 Which animated picture?
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="A">	 Walt Disney made animated picture in 1951
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="U">	 Ok, I haven't seen that tell me about the animated picture please
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="060" type="main">
+    <utterance speaker="U">	 Was it about Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="061" type="main">
+    <utterance speaker="A">	 The animated picture was about Alice in Wonderland
+</utterance>
+  </part>
+  <part id="062" type="main">
+    <utterance speaker="U">	 Ok. But the Tim Burton one was very good.
+</utterance>
+  </part>
+  <part id="063" type="main">
+    <utterance speaker="A">	 Tim Burton made a picture in 2010
+</utterance>
+  </part>
+  <part id="064" type="main">
+    <utterance speaker="U">	 I know know, it was in 3D
+</utterance>
+  </part>
+  <part id="065" type="main">
+    <utterance speaker="A">	 Ok. 
+</utterance>
+  </part>
+  <part id="066" type="main">
+    <utterance speaker="U">	 Are you in 3D?
+</utterance>
+  </part>
+  <part id="067" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="068" type="main">
+    <utterance speaker="U">	 You are not very self conscious, or self knowlegeable
+</utterance>
+  </part>
+  <part id="069" type="main">
+    <utterance speaker="A">	 Ok. 
+</utterance>
+  </part>
+  <part id="070" type="main">
+    <utterance speaker="U">	 Ok. Ehm. Do you think there will be a new film about Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="071" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="072" type="main">
+    <utterance speaker="U">	 Have you read Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="073" type="main">
+    <utterance speaker="A">	 I am an expert on Alice in Wonderland
+</utterance>
+  </part>
+  <part id="074" type="main">
+    <utterance speaker="U">	 Did you like the book?
+</utterance>
+  </part>
+  <part id="075" type="main">
+    <utterance speaker="A">	 I liked the book a lot
+</utterance>
+  </part>
+  <part id="076" type="main">
+    <utterance speaker="U">	 Did you have a copy with pictures?
+</utterance>
+  </part>
+  <part id="077" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+</dialogue>

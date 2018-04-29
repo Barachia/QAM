@@ -1,0 +1,260 @@
+<dialogue id="13" condition="C" duration="8m32">
+  <part id="000" type="main">
+    <utterance speaker="A">	 Hello madam, my name is James.
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="U">	 Hello, my name is Alice.
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="A">	 Hi Alice.
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="U">	 Hi
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="A">	 I know everything about Alice in Wonderland. Is there anything you'd like to know?
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="U">	 Yes, please tell me about Alice.
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="A">	 Alice is 8 years old. She was based on Alice Little. A child friend of the author. Alice owns a cat named Dinah. Dinah is also based on a real cat. Is there something you'd like to know about Lewis Carroll, the author?
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="U">	 Yes, please tell me. I've never heard of him.
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="A">	 Lewis Carroll was a penname for Charles Dodgson. He was born in 1832. He died in 1898. He is a mathematician. Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="U">	 How many books did he write?
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="A">	 Lewis Carroll wrote 12 books in total. His first book was a Tangled Tale.
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="U">	 Did he write... only book for children?
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="A">	 Sorry, I don't know the answer.
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="U">	 The books. He writes books. Only for children or also for adults?
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="A">	 Lewis Carroll wrote books for both adults and children.
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="U">	 Ok, I understand. Thanks.
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="A">	 Is there something you'd like to know about the rabbit?
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="U">	 Yes. Why a White Rabbit?
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="A">	 The name of the White Rabbit was W. Rabbit.
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="U">	 Ok. And he was the only rabbit in the story?
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="A">	 He is the only rabbit in Alice in Wonderland.
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="U">	 Ok. Thank you.
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="A">	 Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="U">	 No. Thank you.
+</utterance>
+  </part>
+  <part id="024" type="interrupt">
+    <utterance speaker="E">Excuse me, would you like some tea or coffee? </utterance>
+  </part>
+  <part id="025" type="interrupt">
+    <utterance speaker="U">No, thank you. </utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="A">	 Don't you think it's rude to interrupt our conversation?
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="U">	 Again please.
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="A">	 Don't you think it's rude to interrupt our conversation?
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="U">	 No... No. Not in this conversation
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="A">	 Ok
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="U">	 So go ahead.
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="A">	 Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="U">	 No, not exactly. I don't have any questions or... Do you...
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="A">	 Is there something you'd like to know about cats eating bats?
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="U">	 Ah, yes. Do they? Do they eat bats?
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="A">	 Cats sometimes catch bats when the fall on the floor.
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="U">	 But do they eat them?
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="A">	 Sometimes they eat the bats they catch.
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="U">	 Do they like it to eat them?
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="A">	 Sorry, I do not know the answer.
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="U">	 The cats. Do they like to eat a bat? I don't think it's... it's nice. I don't think they like it.
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="A">	 Sorry, I don't know.
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="U">	 What do cats eat normally?
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="A">	 Normally cats eat mice.
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="U">	 Again please, what do they eat?
+</utterance>
+  </part>
+  <part id="045" type="main">
+    <utterance speaker="A">	 Normally, cats eat mice.
+</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="U">	 Ok, yes. Only mice. Or
+</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="A">	 In Alice there is a mouse that is afraid of Dinah, the cat.
+</utterance>
+  </part>
+  <part id="048" type="main">
+    <utterance speaker="U">	 Ok, I agree, yes. But cats do also eat birds, isn't it.
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="A">	 Cats also eat birds.
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="U">	 Yeah
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="A">	 In Alice in Wonderland there is a bird afraid of Dinah.
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="U">	 Ok.
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="A">	 Is there something else you'd like to know?
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="U">	 Let me see...
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="A">	 Is there something
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="U">	 Yeah, yeah. Maybe... Something about the orange marmelade?
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="A">	 The falling jar of marmelade is not supposed to fall faster than Alice during a free fall. This is against the laws of physics.
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="U">	 Ok. So... And the tunnel was very deep?
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="A">	 The tunnel was very deep indeed.
+</utterance>
+  </part>
+  <part id="060" type="main">
+    <utterance speaker="U">	 How long took the fall from Alice? How many minutes?
+</utterance>
+  </part>
+  <part id="061" type="main">
+    <utterance speaker="A">	 That is unknown. But given the amount of events during the fall, it would've been very long.
+</utterance>
+  </part>
+  <part id="062" type="main">
+    <utterance speaker="U">	 She wasn't... She was afraid for the fall?
+</utterance>
+  </part>
+  <part id="063" type="main">
+    <utterance speaker="A">	 Alice was not afraid of the fall.
+</utterance>
+  </part>
+</dialogue>

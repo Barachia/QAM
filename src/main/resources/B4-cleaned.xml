@@ -1,0 +1,260 @@
+<dialogue id="04" condition="B" duration="7m38">
+  <part id="000" type="main">
+    <utterance speaker="U">	 Hello
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="A">	 Hello madam, my name is James
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="U">	 Hello, my name is <name/>, nice to meet you
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="A">	 Hello. I know everything about Alice in Wonderland. Is there something you would like to know?
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="U">	 Well, I've never read the book before, would you recommend it to me?
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="A">	 Of course I would.
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="U">	 OK. What type of book is it? Can you say me something about that?
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="A">	 The book is written in the genre of nonsense.
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="U">	 Nonsense, allright. So, kind of fiction?
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="A">	 Yes, it is fiction.
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="U">	 What type of things happen in the book? Cause I've read the first two pages, and there's no really much of a storyline unraveled yet
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="A">	 Alice chases a rabbit.
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="U">	 Yeah. So, I think at the end of this thing she's just reached the end of the tunnel, I'm guessing this is where Wonderland starts, right?
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about the book?
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="U">	 Well, I'm wondering what the role of the rabbit is in the rest of the book. Can you say something about that?
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="A">	 Maybe you should read further chapters.
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="U">	 Allright, so you don't want to give too much of the story away, I guess. So I was wondering about her cat, Dinah.
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="A">	 Dinah is the cat of Alice.
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="U">	 Does she play a role in this story as well?
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="A">	 Dinah was based and named after a cat based on an actual cat owned by Charles <UNK/> or Carroll.
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="U">	 Is Carroll the author? OK. Are there any things based on the true life in the book?
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="A">	 Alice was based on Alice <UNK/>, a child friend of Lewis Carroll.
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="U">	 OK. So did they have similar adventures together when they were young?
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that. Is there somethign you would like to know about cats eating bats?
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="U">	 Why not, if you can tell me something about that.
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="A">	 Sometimes the cat catches a bat.
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="U">	 But does he eat it? That's the question.
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="A">	 There are known records of cats eating bats.
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="U">	 And do bats eat cats?
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="A">	 There are no known records of bats eating cats.
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="U">	 Is there anything else we can discuss about, based on the first two pages?
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about the falling jar?
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="U">	 Allright, the orange marmelade.
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="A">	 Yes, the jar contained orange marmalade.
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="U">	 What was with the jar, why was it falling so slowly?
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="A">	 Lewis Carroll was a mathematician, he knew that gravity was different than this.
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="U">	 Allright. So how far did Alice actually fall?
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="A">	 Based on the events during this Alice fell quite far.
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="U">	 Did she really reach the center of the Earth, as she expected?
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="A">	 Alice reached Wonderland.
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="U">	 So where is Wonderland?
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="A">	 Wonderland is down the rabbit hole.
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="U">	 OK, makes sense. So what kind of family was Alice from?
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="A">	 Walt <overlap id="001">Disney made an animated picture in 1951.</overlap> 
+</utterance>
+  </part>
+  <part id="044" type="interruption">
+    <utterance speaker="E"><overlap id="001">I'm sorry, would you like some coffee or tea or something?</overlap></utterance>
+  </part>
+  <part id="045" type="interruption">
+    <utterance speaker="U">Uh yeah, thanks.</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="A">	 Don't you think it's rude to interrupt this conversation?
+</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="U">	 A little bit, yeah. 
+</utterance>
+  </part>
+  <part id="048" type="main">
+    <utterance speaker="A">	 OK, good to know.
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="U">	 Allright, what were we discussing? You mentioned something about Disney. 
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="A">	 Walt Disney made an animated picture in 1951.
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="U">	 Allright, I think I saw a movie not so long about Alice in Wonderland.
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="A">	 There is also a non-animated picture made by <UNK/>
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="U">	 By who?
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="A">	 Sorry, could you repeat the question?
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="U">	 This non-animated picture, that was made by who?
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="A">	 Sorry, I don't know the answer.
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="U">	 Is there also a movie of Alice in Wonderland?
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="U">	 So does Wonderland have the same physics rules as we have here?
+</utterance>
+  </part>
+  <part id="060" type="main">
+    <utterance speaker="A">	 There are different rules of gravity.
+</utterance>
+  </part>
+  <part id="061" type="main">
+    <utterance speaker="U">	 So how do these rules work.
+</utterance>
+  </part>
+  <part id="062" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that.
+</utterance>
+  </part>
+  <part id="063" type="main">
+    <utterance speaker="U">	 Are there other things different in Wonderland?
+</utterance>
+  </part>
+  <part id="064" type="main">
+    <utterance speaker="A">	 Wonderland is based on nonsense.
+</utterance>
+  </part>
+</dialogue>

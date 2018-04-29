@@ -1,0 +1,169 @@
+<dialogue id="01" condition="B" duration="7m36s">
+	<part type="main" id="001">
+		<utterance speaker="U">Hello</utterance>
+	</part>
+	<part type="main" id="002"><utterance speaker="A">
+		Hello madam, my name is James
+	</utterance></part>
+	<part type="main" id="003"><utterance speaker="U">
+		I'm not a madam, but OK
+	</utterance></part>
+	<part type="main" id="004"><utterance speaker="A">
+		I know everything about Alice in Wonderland. Is there anything you would like to know?
+	</utterance></part>
+	<part type="main" id="005"><utterance speaker="U">
+		Who wrote it?
+	</utterance></part>
+	<part type="main" id="006"><utterance speaker="A">
+		Sorry, I did not get that		
+	</utterance></part>
+	<part type="main" id="007"><utterance speaker="U">
+		Who wrote Alice in Wonderland
+	</utterance></part>
+	<part type="main" id="008"><utterance speaker="A">
+		Alice in Wonderland was written by Charles <UNK/>, or Lewis Carroll, which was his pen name
+	</utterance></part>
+	<part type="main" id="009"><utterance speaker="U">
+		When did he wrote it?
+	</utterance></part>
+	<part type="main" id="010"><utterance speaker="A">
+		He wrote it in 1865. Is there anything else you would like to know about Alice's background?
+	</utterance></part>
+	<part type="main" id="011"><utterance speaker="U">
+		 What's the name of the cat?
+	</utterance></part>
+	<part type="main" id="012"><utterance speaker="A">
+		 The cat is named Dinah
+	</utterance></part>
+	<part type="main" id="013"><utterance speaker="U">
+		 There is another cat in the book. <UNK/> comparison between the two cats?
+	</utterance></part>
+	<part type="main" id="014"><utterance speaker="A">
+		 You mean the cat later during the book?
+	</utterance></part>
+	<part type="main" id="015"><utterance speaker="U">
+		 Yes
+	</utterance></part>
+	<part type="main" id="016"><utterance speaker="A">
+		 Let's discuss this when you have finished this chapter and further chapters
+	</utterance></part>
+	<part type="main" id="017"><utterance speaker="U">
+		 What's the name of the rabbit then?
+	</utterance></part>
+	<part type="main" id="018"><utterance speaker="A">
+		 Let's discuss this when you have finished further chapters. Is there anything you would like to know about cats eating bats?
+	</utterance></part>
+	<part type="main" id="019"><utterance speaker="U">
+		 Do cats eat bats?
+	</utterance></part>
+	<part type="main" id="020"><utterance speaker="A">
+		 Cats eat bats whenever they are able to catch one.
+	</utterance></part>
+	<part type="main" id="021"><utterance speaker="U">
+		 What was the rabbit wearing?
+	</utterance></part>
+	<part type="main" id="022"><utterance speaker="A">
+		 Sorry, I did not get that
+	</utterance></part>
+	<part type="main" id="023"><utterance speaker="U">
+		 What was the rabbit wearing? Alice's rabbit, what it was wearing
+	</utterance></part>
+	<part type="main" id="024"><utterance speaker="A">
+		 He was late for a meeting
+	</utterance></part>
+	<part type="main" id="025"><utterance speaker="U">
+		 What meeting?
+	</utterance></part>
+	<part type="main" id="026"><utterance speaker="A">
+		 Maybe you should read later chapters. When was Alice falling, she grabbed a jar.
+	</utterance></part>
+	<part type="main" id="027"><utterance speaker="U">
+		 What was the name of the jar? What was written on the jar?
+	</utterance></part>
+	<part type="main" id="028"><utterance speaker="A">
+		 There was jam in the jar. Is there something you would like to know about books without images?
+	</utterance></part>
+	<part type="main" id="029"><utterance speaker="U">
+		 Yes, tell me something about it.
+	</utterance></part>
+	<part type="main" id="030"><utterance speaker="A">
+		I learned to appreciate books without images when I was a student.
+	</utterance></part>
+	<part type="main" id="031"><utterance speaker="U">
+		 You were a student?
+	</utterance></part>
+	<part type="main" id="032"><utterance speaker="A">
+		 Could you repeat that?
+	</utterance></part>
+	<part type="main" id="033"><utterance speaker="U">
+		 You said you appreciated when you were a student. So you were a student?
+	</utterance></part>
+	<part type="main" id="034"><utterance speaker="A">
+		 I am very known about literature
+	</utterance></part>
+	<part type="main" id="035"><utterance speaker="U">
+		 So have you read the whole book, the Alice in Wonderland?
+	</utterance></part>
+	<part type="main" id="036"><utterance speaker="A">
+		 Yes, I am an expert of Alice in Wonderland.
+	</utterance></part>
+	<part type="main" id="037"><utterance speaker="U">
+		 Yes, but have you read it?
+	</utterance></part>
+	<part type="main" id="038"><utterance speaker="A">
+		 Of course.
+	</utterance></part>
+	<part type="main" id="039"><utterance speaker="U">
+		 For how long was Alice <overlap id="001">falling?</overlap>
+	</utterance></part>	
+	<part type="interruption" id="040">
+		<utterance speaker="E">
+			<overlap id="001">I'm sorry</overlap>. Do you like some water, coffee or tea?
+		</utterance>
+	</part>
+	<part type="main" id="041"><utterance speaker="A">
+		 Don't you think it's rude to give attention to someone else during our conversation?
+	</utterance></part>
+	<part type="main" id="042"><utterance speaker="U">
+		 Given the fact that you're not a human, no
+	</utterance></part>
+	<part type="main" id="043"><utterance speaker="A">
+		 OK. Is there something you would like to know about the animated picture?
+	</utterance></part>
+	<part type="main" id="044"><utterance speaker="U">
+		 About what, sorry?
+	</utterance></part>
+	<part type="main" id="045"><utterance speaker="A">
+		 Is there something you would like to know about the animated picture?
+	</utterance></part>
+	<part type="main" id="046"><utterance speaker="U">
+		 I have no idea what is that, can you explain me?
+	</utterance></part>
+	<part type="main" id="047"><utterance speaker="A">
+		 The animated picture was made by Walt Disney in 1951
+	</utterance></part>
+	<part type="main" id="048"><utterance speaker="U">
+		 Ok, I have seen it, stop. For how long was Alice falling?
+	</utterance></part>
+	<part type="main" id="049"><utterance speaker="A">
+		 That is hard to say, but given the amount of events, it must have been quite a while.
+	</utterance></part>
+	<part type="main" id="050"><utterance speaker="U">
+		 So can you describe me a bit what happens next? Because I didn't read the whole book.
+	</utterance></part>
+	<part type="main" id="051"><utterance speaker="A">
+		 During the first chapter Alice falls during the rabbit hole, she lands in a room with a table and a door.
+	</utterance></part>
+	<part type="main" id="052"><utterance speaker="U">
+		 What she does next?
+	</utterance></part>
+	<part type="main" id="053"><utterance speaker="A">
+		 She tries to chase the rabbit
+	</utterance></part>
+	<part type="main" id="054"><utterance speaker="U">
+		 What other books has the same author written?
+	</utterance></part>
+	<part type="main" id="055"><utterance speaker="A">
+		 Lewis Carroll also wrote Through The Looking Glass, which is a sequel to Alice's Adventures in Wonderland.
+	</utterance></part>
+</dialogue>

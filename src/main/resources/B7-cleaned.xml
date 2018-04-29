@@ -1,0 +1,292 @@
+<dialogue id="07" condition="B" duration="7m43">
+  <part id="000" type="main">
+    <utterance speaker="A">	 Hello madam, my name is James
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="U">	 Hello James
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="A">	 I know everything about Alice in Wonderland. Is there anything you would like to know?
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="U">	 I can think of something. What's the rest of the story?
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about the author?
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="U">	 Ok, tell me.
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="A">	 Alice in Wonderland was written by Lewis Carroll a pen name for Charles Dodgson. Charles Dodgson was a mathematician.
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="U">	 Yes.
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about the animated picture?
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="U">	 Yes, tell me who made this
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="A">	 Disney made an animated picture in 1951
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="U">	 Okay...
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about cats eating bats?
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="U">	 Eh, I think this is a strange topic
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about falling jars?
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="U">	 Yes, tell me about those.
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="A">	 It is against the law of physics to drop a jar in free fall 
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="U">	 Ok. It doesn't drop, yes of course
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about the book?
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="U">	 Yes, tell me about the book
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="A">	 The book was written in 1865 by Lewis Carroll
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="U">	 Anything else?
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="A">	 It is written in the nonsense genre
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="U">	 Yes, I know that. And more?
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="A">	 Many things in the book are impossible, or done in an unusual or inverted way
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="U">	 What did you say?
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="A">	 Many things in the book are impossible, or done in an unusual or inverted way
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="U">	 Ok, anything else? It was indeed a strange book
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="A">	 Sorry, I did not get that
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="U">	 It was indeed a strange book. Anything else you can tell me about the book?
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="A">	 Sorry, that is all I know
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="U">	 That is not a lot. Can you tell me the rest of the story?
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="A">	 Maybe you should read further chapters
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="U">	 Yes, that's also a possibility.
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about books without images
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="U">	 Tell me
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="A">	 I learned to appreciate them as a student
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="U">	 Yes... what
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="A">	 Sorry, I did not get that
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="U">	 What did you say?
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="A">	 I learned to appreciate them as a student
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="U">	 Me too. Anything else you can tell me about books without pictures?
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="A">	 Sorry, that is all I know
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="U">	 What else can you tell me about Alice in Wonderland
+</utterance>
+
+  </part>
+  <part id="044" type="interrupt">
+    <utterance speaker="E">Would you like some coffee or tea? At some point.</utterance>
+  </part>
+  <part id="045" type="interrupt">
+    <utterance speaker="U">Coffee? Coffee is always good.</utterance>
+  </part>
+  <part id="046" type="interrupt">
+    <utterance speaker="E">Let's go for that.</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="A">	 Don't you think it's rather rude to interrupt our conversation?
+</utterance>
+  </part>
+  <part id="048" type="main">
+    <utterance speaker="U">	 Haha, he asked me for coffee, of course not that's not
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="A">	 OK
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="U">	 I like coffee
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="A">	 I like coffee too 
+</utterance>
+  </part>
+  <part id="052" type="main">
+    <utterance speaker="U">	 So what else, you are actually from Alice in Wonderland, what else can you tell me?
+</utterance>
+  </part>
+  <part id="053" type="main">
+    <utterance speaker="A">	 Alice was based on a child friend named Alice Little
+</utterance>
+  </part>
+  <part id="054" type="main">
+    <utterance speaker="U">	 Ok. Any more cool facts?
+</utterance>
+  </part>
+  <part id="055" type="main">
+    <utterance speaker="A">	 There is a live action move made by Tim Burton in 2010
+</utterance>
+  </part>
+  <part id="056" type="main">
+    <utterance speaker="U">	 I know. What can you tell me about Tim Burton
+</utterance>
+  </part>
+  <part id="057" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="058" type="main">
+    <utterance speaker="U">	 What else can you tell me about the author
+</utterance>
+  </part>
+  <part id="059" type="main">
+    <utterance speaker="A">	 Alice was based on a child friend named Alice Little
+</utterance>
+  </part>
+  <part id="060" type="main">
+    <utterance speaker="U">	 Yes, go on. 
+</utterance>
+  </part>
+  <part id="061" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="062" type="main">
+    <utterance speaker="U">	 Haha... eh...
+</utterance>
+  </part>
+  <part id="063" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about Alice's background
+</utterance>
+  </part>
+  <part id="064" type="main">
+    <utterance speaker="U">	 Yes tell me
+</utterance>
+  </part>
+  <part id="065" type="main">
+    <utterance speaker="A">	 Alice was based on a child friend named Alice Little
+</utterance>
+  </part>
+  <part id="066" type="main">
+    <utterance speaker="U">	 Again. Anything else you can tell me about Alice
+</utterance>
+  </part>
+  <part id="067" type="main">
+    <utterance speaker="A">	 Dinah was based and named after a cat based on an actual cat owned by Alice Little
+</utterance>
+  </part>
+  <part id="068" type="main">
+    <utterance speaker="U">	 Ok. Anything else?
+</utterance>
+  </part>
+  <part id="069" type="main">
+    <utterance speaker="A">	 Could you repeat the question?
+</utterance>
+  </part>
+  <part id="070" type="main">
+    <utterance speaker="U">	 What else can you tell me?
+</utterance>
+  </part>
+  <part id="071" type="main">
+    <utterance speaker="A">	 It is against the laws of physics to drop a jar in free fall.
+</utterance>
+  </part>
+  <part id="072" type="main">
+    <utterance speaker="U">	 Yes?
+</utterance>
+  </part>
+</dialogue>

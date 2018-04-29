@@ -1,0 +1,71 @@
+A: Hello madam, my name is James
+U: Hello James
+I know everything about Alice in Wonderland. Is there anything you would like to know?
+I can think of something. What's the rest of the story?
+Is there something you would like to know about the author?
+Ok, tell me.
+Alice in Wonderland was written by Lewis Carrol a pen name for Charles Dutchen. Charles Dutchen was a mathematician.
+Yes.
+Is there something you would like to know about the animated picture?
+Yes, tell me who made this
+Disney made an animated picture in 1951
+Okay...
+Is there anything you would like to know about cats eating bats?
+Eh, I think this is a strange topic
+Is there anything you would like to know about falling jars?
+Yes, tell me about those.
+It is against the law of physics to drop a jar in free fall 
+Ok. It doesn't drop, yes ofcourse
+Is there anything you would like to know about the book?
+Yes, tell me about the book
+The book was written in 1865 by Lewis Carrol
+Anything else?
+It is written in the nonsense genre
+Yes, I know that. And more?
+Many things in the book are impossible, or done in an unusual or inverted way
+What did you say?
+Many things in the book are impossible, or done in an unusual or inverted way
+Ok, anything else? It was indeed a strange book
+Sorry, I did not get that
+It was indeed a strange book. Anything else you can tell me about the book?
+Sorry, that is all I know
+That is not a lot. Can you tell me the rest of the story?
+Maybe you should read further chapters
+Yes, that's also a possibility.
+Is there anything you would like to know about books without images
+Tell me
+I learned to appreciate them as a student
+Yes... what
+Sorry, I did not get that
+What did you say?
+I learned to appreciate them as a student
+Me too. Anything else you can tell me about books without pictures?
+Sorry, that is all I know
+What else can you tell me about Alice in Wonderland
+<interruption>
+Don't you think it's rather rude to interrupt our conversation?
+Haha, he asked me for coffee, of course not that's not ]
+[OK
+I like coffee
+I like coffee too 
+So what else, you are actually from Alice in Wonderland, what else can you tell me?
+Alice was based on a child friend named Alice Little
+Ok. Any more cool facts?
+There is a live action move made by Tim Burton in 2010
+I know. What can you tell me about Tim Burton
+Sorry, I do not know that
+What else can you tell me about the author
+Alice was based on a child friend named Alice Little
+Yes, go on. 
+Sorry, I do not know that
+Haha... eh...
+Is there anything you would like to know about Alice's background
+Yes tell me
+Alice was based on a child friend named Alice Little
+Again. Anything else you can tell me about Alice
+Dinah was based and named after a cat based on an actual cat owned by Alice Little
+Ok. Anything else?
+Could you repeat the question?
+What else can you tell me?
+It is against the laws of physics to drop a jar in free fall.
+Yes?

@@ -1,0 +1,192 @@
+<dialogue id="03" condition="B" duration="6m44">
+  <part id="000" type="main">
+    <utterance speaker="A">	 Hello madam, my name is James
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="U">	 Hello
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="A">	 I know everything about Alice in Wonderland, is there anything you would like to know?
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="U">	 I'm not a madam. Yes. I would like to know when Alice meet the white rabbit
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="A">	 Later in the book Alice meets the white rabbit. Maybe you should read further chapters 
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="U">	 Yes. OK. Good. Let me see... what else I want to know. Well, perhaps you could tell me how Alice returned home
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="A">	 Maybe you should read later chapters
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="U">	 OK it's not very informative. Tell me something about the author of the book
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="A">	 Lewis Carrolll was a mathematician
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="U">	 OK. Is there also math in the book?
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="A">	 The book contains many references to math
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="U">	 OK. Such as?
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="A">	 Could you repeat that?
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="U">	 Could you provide an example of the math provided in the book, please?
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that.
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="U">	 Ok, that's alright. Let me see... what can you call one of the significant moment that occur in the book, besides Alices traveling to wionderland?
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="A">	 Maybe you should read further chapters
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="U">	 Yes. Provide me with some information about the book. Just tell me something.
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="A">	 The book was written in 1865 by Lewis Carroll. The book is written in the nonsense genre.
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="U">	 Oh. Ok. So the events are not actually true. Right?
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="A">	 Could you repeat?
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="U">	 So the events did not actually take place.
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="A">	 The events are...
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="U">	 Nevermind. So Alice is sent to Wonderland, right? Yes, that's true because I just read it. How long did Alice stay in wonderland?
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="A">	 Maybe you should read further chapters. Is there anything you would like to know about Dinah the cat?
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="U">	 Sure, tell me something about the cat. 
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="A">	 Dinah was based and named after a cat based on an actual cat own by Charles <UNK/> or Carroll
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="U">	 OK. Cool. Was Dinah a nice cat?
+</utterance>
+  </part>
+  <part id="028" type="interruption">
+    <utterance speaker="E">I'm sorry, I would like to ask you. Would you like some coffee or tea?</utterance>
+  </part>
+  <part id="029" type="interruption">
+    <utterance speaker="U">No thanks, that's okay.</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="A">	 Don't you think it's rather rude to interrupt during our conversation?
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="U">	 What? No, that's ok. We can interrupt you. Let me see... can you tell me something about the white rabbit?
+</utterance>
+  </part>
+  <part id="032" type="main">
+    <utterance speaker="A">	 Lewis Carrolll wrote Alice's Adventures in Wonderland, a pen name for Charles <UNK/>
+</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="U">	 No, no, can you tell me something about the character, the white rabbit?
+</utterance>
+  </part>
+  <part id="034" type="main">
+    <utterance speaker="A">	 The rabbit is being chased by Alice
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="U">	 Yes, why is the rabbit being chased by Alice
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="U">	 Can the rabbit help Alice return home to her family?
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="U">	 That's a shame. Can you tell me something about the watch of the rabbit? What color did it have?
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="U">	 Is Alice's sister nice, are they friendly with each other?
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="A">	 Sorry, this is not described in the book.
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="U">	 Oh, that's a shame. But is it her older sister?
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="A">	 Yes, the sister is older than Alice.
+</utterance>
+  </part>
+  <part id="045" type="main">
+    <utterance speaker="U">	 Ok, cool. Was Alice happy in Wonderland?
+</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="A">	 Sorry, I do not know that
+</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="U">	 You do not know that much
+</utterance>
+  </part>
+</dialogue>

@@ -1,0 +1,210 @@
+<dialogue id="05" condition="B" duration="7m12">
+  <part id="000" type="main">
+    <utterance speaker="U">	 Hello
+</utterance>
+  </part>
+  <part id="001" type="main">
+    <utterance speaker="A">	 Hello madam, my name is James
+</utterance>
+  </part>
+  <part id="002" type="main">
+    <utterance speaker="U">	 I'm not a madam
+</utterance>
+  </part>
+  <part id="003" type="main">
+    <utterance speaker="A">	 I know everything about Alice in Wonderland. Is there anything you would like to know?
+</utterance>
+  </part>
+  <part id="004" type="main">
+    <utterance speaker="U">	 Not really
+</utterance>
+  </part>
+  <part id="005" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about the author?
+</utterance>
+  </part>
+  <part id="006" type="main">
+    <utterance speaker="U">	 Oh you could tell me something interesting
+</utterance>
+  </part>
+  <part id="007" type="main">
+    <utterance speaker="A">	 Lewis Carroll wrote Alice's Adventures in Wonderland. Her <UNK/> name was Charles Dodgson. Charles Dodgson was a mathematician. Is there anything you would like to know about the animated picture?
+</utterance>
+  </part>
+  <part id="008" type="main">
+    <utterance speaker="U">	 I don't know
+</utterance>
+  </part>
+  <part id="009" type="main">
+    <utterance speaker="A">	 Is there anything you would like to know about cats eating bats?
+</utterance>
+  </part>
+  <part id="010" type="main">
+    <utterance speaker="U">	 Yes that sound interesting
+</utterance>
+  </part>
+  <part id="011" type="main">
+    <utterance speaker="A">	 There is no known evidence of bats eating cats
+</utterance>
+  </part>
+  <part id="012" type="main">
+    <utterance speaker="U">	 Oh.
+</utterance>
+  </part>
+  <part id="013" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about books without images?
+</utterance>
+  </part>
+  <part id="014" type="main">
+    <utterance speaker="U">	 No, not really
+</utterance>
+  </part>
+  <part id="015" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about a hole to the other side of the earth
+</utterance>
+  </part>
+  <part id="016" type="main">
+    <utterance speaker="U">	 That wouldn't work right?
+</utterance>
+  </part>
+  <part id="017" type="main">
+    <utterance speaker="A">	 When this book was being written, this was a question that was discussed by many scientists, until they found an answer. Is there something you would like to know about Alice's background?
+</utterance>
+  </part>
+  <part id="018" type="main">
+    <utterance speaker="U">	 Yes
+</utterance>
+  </part>
+  <part id="019" type="main">
+    <utterance speaker="A">	 Alice was based on a child's friend named Alice Liddell. 
+</utterance>
+  </part>
+  <part id="020" type="main">
+    <utterance speaker="U">	 Does she have family?
+</utterance>
+  </part>
+  <part id="021" type="main">
+    <utterance speaker="A">	 Alice has a sister.
+</utterance>
+  </part>
+  <part id="022" type="main">
+    <utterance speaker="U">	 And her parents?
+</utterance>
+  </part>
+  <part id="023" type="main">
+    <utterance speaker="A">	 Her parents are not described in the book
+</utterance>
+  </part>
+  <part id="024" type="main">
+    <utterance speaker="U">	 Why aren't they described in the book?
+</utterance>
+  </part>
+  <part id="025" type="main">
+    <utterance speaker="A">	 Her parents are not part of Wonderland
+</utterance>
+  </part>
+  <part id="026" type="main">
+    <utterance speaker="U">	 Do you think there's a reason for that?
+</utterance>
+  </part>
+  <part id="027" type="main">
+    <utterance speaker="A">	 Maybe you should read further chapters. Is there something you would like to know about Dinah the cat?
+</utterance>
+  </part>
+  <part id="028" type="main">
+    <utterance speaker="U">	 Yes, what's her importance?
+</utterance>
+  </part>
+  <part id="029" type="main">
+    <utterance speaker="A">	 Dinah was named and based after a cat based on the actual cat owned by a friend of Carroll.
+</utterance>
+  </part>
+  <part id="030" type="main">
+    <utterance speaker="U">	 But why is he in the book? It's just a cat
+</utterance>
+  </part>
+  <part id="031" type="main">
+    <utterance speaker="A">	 Sorry, I do not know the answer
+</utterance>
+  </part>
+  <part id="032" type="interrupt">
+    <utterance speaker="E"> I'm sorry, I brought some coffee, here it is.</utterance>
+  </part>
+  <part id="033" type="main">
+    <utterance speaker="A">	 Don't you think it's rather rude to interrupt this conversation?
+</utterance>
+  </part>
+
+  <part id="034" type="main">
+    <utterance speaker="U">	 Well that's not my fault
+</utterance>
+  </part>
+  <part id="035" type="main">
+    <utterance speaker="A">	 OK. Is there anything you would like to know about the falling jar?
+</utterance>
+  </part>
+  <part id="036" type="main">
+    <utterance speaker="U">	 Yes, why is it overtaking her?
+</utterance>
+  </part>
+  <part id="037" type="main">
+    <utterance speaker="A">	 Sorry, I did not get that
+</utterance>
+  </part>
+  <part id="038" type="main">
+    <utterance speaker="U">	 Wouldn't the jar fall as quickly as she falls
+</utterance>
+  </part>
+  <part id="039" type="main">
+    <utterance speaker="A">	 It is against the law of physics to drop a jar in a free fall
+</utterance>
+  </part>
+  <part id="040" type="main">
+    <utterance speaker="U">	 But Lewis didn't notice that
+</utterance>
+  </part>
+  <part id="041" type="main">
+    <utterance speaker="A">	 Lewis was a mathematician, he knew about this.
+</utterance>
+  </part>
+  <part id="042" type="main">
+    <utterance speaker="U">	 So he choose to ignore it
+</utterance>
+  </part>
+  <part id="043" type="main">
+    <utterance speaker="A">	 There are written records of eating bats if you can catch them
+</utterance>
+  </part>
+  <part id="044" type="main">
+    <utterance speaker="U">	 That answer doesn't even make sense
+</utterance>
+  </part>
+  <part id="045" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about books without images?
+</utterance>
+  </part>
+  <part id="046" type="main">
+    <utterance speaker="U">	 You already asked that question
+</utterance>
+  </part>
+  <part id="047" type="main">
+    <utterance speaker="A">	 Is there something you would like to know about Alice's background?
+</utterance>
+  </part>
+  <part id="048" type="main">
+    <utterance speaker="U">	 Yes, please tell me
+</utterance>
+  </part>
+  <part id="049" type="main">
+    <utterance speaker="A">	 Alice was based on a child's friend named Alice Liddell. 
+</utterance>
+  </part>
+  <part id="050" type="main">
+    <utterance speaker="U">	 Can you tell me more?
+</utterance>
+  </part>
+  <part id="051" type="main">
+    <utterance speaker="A">	 Lewis Carroll liked children. It has been speculated he was a pedophile
+</utterance>
+  </part>
+</dialogue>
