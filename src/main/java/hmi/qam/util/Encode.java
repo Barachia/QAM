@@ -12,7 +12,7 @@ public class Encode {
 
     public Encode() {
         m3 = new Metaphone3();
-
+        m2 = new DoubleMetaphone();
     }
 
     /**
@@ -21,20 +21,11 @@ public class Encode {
      * @return
      */
     public String getEncoding(String text){
-        m3.SetWord(text);
-        m3.m_metaphLength = text.trim().length();
-        m3.Encode();
-        return m3.GetMetaph();
+        return getEncoding(text, text.trim().length());
     }
 
     public String getWordEncoding(String text){
-        String words = "";
-        Pattern p = Pattern.compile("\\b\\w*\\b");
-        Matcher matcher = p.matcher(text);
-        while(matcher.find()){
-            words = words + getEncoding(matcher.group());
-        }
-        return words;
+        return getWordEncoding(text,text.trim().length());
     }
 
     public String getWordEncoding(String text, int length){
@@ -48,10 +39,10 @@ public class Encode {
     }
 
     /**
-     * Set encoding with fixed length
-     * @param text
-     * @param length
-     * @return
+     * Set Metaphone 3 encoding with fixed length
+     * @param text, the text to encode
+     * @param length, the length of the original text
+     * @return the M3 encoded string of the original text with given length
      */
     public String getEncoding(String text, int length){
         m3.SetWord(text);
@@ -59,10 +50,20 @@ public class Encode {
         m3.Encode();
         return m3.GetMetaph();
     }
-    
+
+    /**
+     * Set DoubleMetaphone with variable length
+     * @param text, the text to encode
+     * @return, the M2 encoded string of the original text
+     */
     public String getDoubleMetaphoneEncoding(String text){
-        m2.setMaxCodeLen(text.trim().length());
-        m2.encode(text);
-        return m2.toString();
+        return getDoubleMetaphoneEncoding(text, text.trim().length());
     }
+
+    public String getDoubleMetaphoneEncoding(String text, int length){
+        m2.setMaxCodeLen(length);
+        m2.encode(text);
+        return m2.doubleMetaphone(text);
+    }
+
 }

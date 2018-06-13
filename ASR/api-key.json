@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "concrete-bloom-202711",
+  "private_key_id": "1d8b83011c9bed879da815fcacd3c0c34f59b73b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCdqhBTAyZQbkrP\nmgkZ4Cy7AVYCzHlC8aMO3i04z/zByEyWm4Xyl2qDJhri+Ku2syqm3/Xdv64SZcMu\nh1eNNZpEX7a1qesuuQfNoAk2A9Whl8c492uaBNa8DSRzKP3anYlYpnwfC19HmzN+\nPP6Z59KTV0lfHl4REPH4SGmJPJl/1UOr67RDdFHFekvaz6IDXjCjkQOGxfF9QKc4\nlc9cr0dyjv3Xzi9tzuOMoUVWukfzllsNnq/8ghVceerq6YfvnP8jnmRUmUEQivlI\nAwc3UkxsljrkxegrEkYugzCyenNwoQiFkxty0R0fa3D/52bx4FaQWkZTAnUJqxt6\nNApTgn3xAgMBAAECgf9J5M0Oo5GrGChEtYrbPDG6uAv59wYimgQ0XlwPQDiQAH9+\nbDsbQFwnEv1tWtIxBjbqf0jA1FWSdH01AGRzAcpHbB0pMiCdMAHJUQDeB38c9M5u\n18u9AdReeVLtHdX+it+/DvMD7yGa+sBwGPuQQCNknkRR5amwxObFlOZqNDy9H4/w\nlpK3akt/4ibNuf3D2lS0wnFGaHgemMJD9712JvozQtuxTJs+NaUw/Kq2JBmJ7Tnw\nrNbOXhNJZ624EHX5HHkhcHmnwYFg+M5XpGNYZlHjcKlFAMbGgFKoy3kN7PWGrFmo\n4njLUUTwsejlJEjGAwX3c62EDNvbxWJDeRtO5X0CgYEA0BdSkjR+j/EsmP8P3Vmb\nPO5ZGeo7hxn0wQW0xjJ7AC6YfdsaKLh8dEyHIqrGhvb8cW/9NEZ2yuBfgY18S9l+\nrKzJMl8F2I5NbR0+x09fBc33haEabNFsdyl1VKgztMaBOFN77fVJ2Be3AQHUuz9T\nJlQ4X0rIeX3U60WpO9adR50CgYEAwfajNGXS2RcGk0XWUxC4wTp76EHubIii9j77\n6FnoPPuxY1FAEMnXhuVs1Od2svvDM53pgIQjgvs9A8ndph5/zSpQwWLbpPVvC2hc\nfYYK9llu/JQBlRIlwk1Pk+O7Y9blpruinTsfy5w16c7zvdYe0MP0kySLQcJ3C3fz\nPXoCIWUCgYBZ7VpPuMPhLNabH88ZV3oQ8OgsnN8w2XS+XdrrtDEXuQtJiIBbjK6s\nC85ymt7EwMQDuePwzWrU7fYYJK7MkKd/tAQW8p2yIn0vZG4W8CQefA41/5NN54s6\nS/5aoX4G56o8T0fFZDWPX2BE3Sez6//hFpBuDgFpD4oOSsKCC5NYuQKBgH07i0Bn\nhe1YqowoCSt0nnVUF3BsMU6uIdmv7OGmOwY00+F2MlEkoR2dv9ju4XrKhswq5vpt\nVqhZIpnxmkSJaKbE7YMPGxW0yc+pwB3jj+xi7f/yZ9sh7nM3i2vHG9RoibpPZ7zw\n0aSa5UxirIkjWJ4eBymB7M+2iTpEZi6JOhrpAoGALCMAChSHr04Z7tnk8ePTTXlY\njrBGC/vuifIiMIgVAuZNDB5FIkOb/SBEoSjy1DNq/3VwzIKWqaWuYEy81gpdt0f+\n0F+9mNcmx3ANziRvdGP5cusAw+O6xyC5PkSOSjHaSToKSoO0yEzp9cUBQLgsEwlt\n7UIaJta2k9qMJUf7PWk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "twente@concrete-bloom-202711.iam.gserviceaccount.com",
+  "client_id": "109668806184995818210",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/twente%40concrete-bloom-202711.iam.gserviceaccount.com"
+}

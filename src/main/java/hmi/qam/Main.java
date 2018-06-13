@@ -1,6 +1,9 @@
 package hmi.qam;
 
+import com.opencsv.CSVReaderHeaderAware;
+import hmi.qam.util.CSV;
 import hmi.qam.util.Encode;
+import hmi.qam.util.QAPairs;
 import info.debatty.java.stringsimilarity.JaroWinkler;
 import info.debatty.java.stringsimilarity.Levenshtein;
 import org.w3c.dom.Document;
@@ -16,51 +19,139 @@ import javax.xml.xpath.*;
 
 import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 
 public class Main {
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws ParserConfigurationException, SAXException, XPathExpressionException, IOException {
 
-        testMetaphone();
+        //ArrayList<NodeList> actual = readFiles();
+        //ArrayList<NodeList> prediction = writeFiles();
+        //System.out.println(actual.toArray().toString() + prediction.toArray().toString());
+        //testMetaphone();
+        String csv = System.getProperty("user.dir") + "\\ASR\\QAPairs.csv";
+        List<QAPairs> qap = CSV.readFile(csv);
+        Encode k = new Encode();
+        JaroWinkler j = new JaroWinkler();
+        int encoded = 0;
+        int string = 0;
+        for(QAPairs p : qap){
+
+            String encodedActual = k.getDoubleMetaphoneEncoding(p.getActual());
+            String encodedPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
+            //System.out.printf("Actual: %s, Encoded: %s \n",p.getActual(),encodedActual);
+            //System.out.printf("Predicted: %s, Encoded: %s \n",p.getPredicted(),encodedPredicted);
+            double sim1 = j.similarity(p.getActual().toLowerCase(),p.getPredicted().toLowerCase());
+            double sim2 = j.similarity(encodedActual,encodedPredicted);
+            System.out.printf("Sentence: %s String sim: %s and Encoded sim: %s \n",p.getActual(),sim1,sim2);
+            if(sim1>sim2){
+                string++;
+            }
+            else{
+                encoded++;
+            }
+
+        }
+        System.out.printf("Performance (A/E): %s/%s",string, encoded);
 
 
+
+//        Map<String,String> values = new CSVReaderHeaderAware(new FileReader(csv)).readMap();
+//        for(Map.Entry<String,String> e : values.entrySet()){
+//            System.out.println(e.getKey() + "\n"+  e.getValue());
+//        }
 
 
     }
 
-    public void readFiles() throws XPathExpressionException, ParserConfigurationException, IOException, SAXException {
+    private static ArrayList<NodeList> writeFiles() throws ParserConfigurationException, IOException, XPathExpressionException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        //BufferedReader reader = new BufferedReader(new InputStreamReader(Main.class.getClassLoader().getResource("B1-cleaned.xml")));
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream file = classLoader.getResourceAsStream("B1-cleaned.xml");
+        XPathFactory xPathfactory = XPathFactory.newInstance();
+        XPath xpath;
+        XPathExpression expr;
+        ArrayList<NodeList> array = new ArrayList();
 
-        Document doc = builder.parse(file);
+        for(int i = 1; i<= 8; i++){
+            File f = new File(System.getProperty("user.dir") + "\\ASR\\"+"B" + i + "-asr.txt");
+            if(f.exists()) {
+                try (InputStream annotation = new FileInputStream(f)) {
+                    BufferedReader br = new BufferedReader(new InputStreamReader(annotation));
+                    String data = "";
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        String xml = line.replaceAll("&lt;UNK&gt;","[UNK]");
+                        xml = xml.split(";")[2];
+                        InputSource is = new InputSource(new StringReader(xml));
+                        Document asr = builder.parse(is);
+                        xpath = xPathfactory.newXPath();
+                        expr = xpath.compile("/ASR_output/transcriptions/text/text()");
+                        NodeList nl = (NodeList) expr.evaluate(asr, XPathConstants.NODESET);
+                        array.add(nl);
+                        data = data + "\n" + expr.evaluate(asr).toLowerCase();
+                    }
+                    String path = "B" + i + "-asr-cleaned.txt";
+                    //writeToFile(path, data);
+                }
+            }
+        }
+        for(int i = 1; i<= 8; i++){
+            File f = new File(System.getProperty("user.dir") + "\\ASR\\"+"C" + i + "-asr.txt");
+            if(f.exists()) {
+                try (InputStream annotation = new FileInputStream(f)) {
+                    BufferedReader br = new BufferedReader(new InputStreamReader(annotation));
+                    String data = "";
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        String xml = line.replaceAll("&lt;UNK&gt;","[UNK]");
+                        xml = xml.split(";")[2];
+                        InputSource is = new InputSource(new StringReader(xml));
+                        Document asr = builder.parse(is);
+                        xpath = xPathfactory.newXPath();
+                        expr = xpath.compile("/ASR_output/transcriptions/text/text()");
+                        data = data + "\n" + expr.evaluate(asr).toLowerCase();
+                    }
+                    String path = "C" + i + "-asr-cleaned.txt";
+                    //writeToFile(path, data);
+                }
+            }
+        }
+        return array;
+    }
+
+    public static ArrayList<NodeList> readFiles() throws XPathExpressionException, ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
         XPathFactory xPathfactory = XPathFactory.newInstance();
         XPath xpath = xPathfactory.newXPath();
-        XPathExpression expr = xpath.compile("/dialogue/part");
-
-        NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
-        for(int i = 0; i < nl.getLength(); i++){
-            //System.out.println(nl.item(i).getTextContent());
-        }
-        for(int i = 1; i<= 1; i++){
-            InputStream annotation = classLoader.getResourceAsStream("B"+i+"-asr.txt");
-            BufferedReader br = new BufferedReader(new InputStreamReader(annotation));
-            String data ="";
-            String line;
-            while((line = br.readLine()) != null){
-                String xml = line.split(";")[2];
-                InputSource is = new InputSource(new StringReader(xml));
-                Document asr = builder.parse(is);
-                xpath = xPathfactory.newXPath();
-                expr = xpath.compile("/ASR_output/transcriptions/text/text()");
-                data = data + "\n" +  expr.evaluate(asr).toLowerCase();
+        XPathExpression expr;
+        ArrayList<NodeList> list = new ArrayList();
+        for(int i = 1; i <= 8; i++){
+            File f = new File(System.getProperty("user.dir") + "\\ASR\\" + "B"+i+"-cleaned.xml");
+            if(f.exists()){
+                try(InputStream file = new FileInputStream(f)){
+                    Document doc = builder.parse(file);
+                    expr = xpath.compile("/dialogue/part");
+                    NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+                    list.add(nl);
+                }
             }
-            String path =  "B"+i+"-asr-cleaned.txt";
-            //writeToFile(path,data);
         }
+        for(int i = 1; i <= 8; i++){
+            File f = new File(System.getProperty("user.dir") + "\\ASR\\" + "C"+i+"-cleaned.xml");
+            if(f.exists()){
+                try(InputStream file = new FileInputStream(f)){
+                    Document doc = builder.parse(file);
+                    expr = xpath.compile("/dialogue/part");
+                    NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+                    list.add(nl);
+                }
+            }
+        }
+        return list;
     }
 
     public static void testMetaphone(){
@@ -69,21 +160,26 @@ public class Main {
 
         Encode k = new Encode();
 
-        String a = " When was Alice falling, she grabbed a jar";
-        String b = "gwen was of his fooling the good the";
+        //String a = " When was Alice falling, she grabbed a jar";
+        //String b = "gwen was of his fooling the good the";
+        String a = "for how long was alice falling";
+        String b = "how long was Enniskillen";
         System.out.println("a: " + a);
         System.out.println("b: " + b);
         System.out.println("Similarity: " + j.similarity(a,b));
 
         String c = k.getDoubleMetaphoneEncoding(a);
-        System.out.println(c);
+        String d = k.getDoubleMetaphoneEncoding(b, a.length());
+        System.out.println("Double for a: " + c);
+        System.out.println("Double for b: " + d);
+        System.out.println("Double similarity: " + j.similarity(c,d));
 
 
         String aKey = k.getEncoding(a);
-        String bKey = k.getEncoding(b,aKey.length());
+        String bKey = k.getEncoding(b, a.length());
         System.out.println("aKey: " + aKey);
         System.out.println("bKey: " + bKey);
-        System.out.println("Similarity: " + j.similarity(aKey,bKey));
+        System.out.println("M3 Similarity: " + j.similarity(aKey,bKey));
     }
 
     public static void writeToFile(String filename, String text){
@@ -112,6 +208,8 @@ public class Main {
             e.printStackTrace();
         }
     }
+
+
 
 
 }

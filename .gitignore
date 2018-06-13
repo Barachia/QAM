@@ -2,3 +2,4 @@ build/
 *.MP4
 .gradle/
 .idea/
+*.wav
