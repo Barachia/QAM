@@ -6,19 +6,22 @@ import hmi.qam.util.Encode;
 import hmi.qam.util.QAPairs;
 import info.debatty.java.stringsimilarity.JaroWinkler;
 import info.debatty.java.stringsimilarity.Levenshtein;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.*;
 
 import java.io.*;
+import java.math.RoundingMode;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -32,37 +35,9 @@ public class Main {
         //ArrayList<NodeList> prediction = writeFiles();
         //System.out.println(actual.toArray().toString() + prediction.toArray().toString());
         //testMetaphone();
-        String csv = System.getProperty("user.dir") + "\\ASR\\QAPairs.csv";
-        List<QAPairs> qap = CSV.readFile(csv);
-        Encode k = new Encode();
-        JaroWinkler j = new JaroWinkler();
-        int encoded = 0;
-        int string = 0;
-        for(QAPairs p : qap){
+        //calculateScores();
+        QAPParser();
 
-            String encodedActual = k.getDoubleMetaphoneEncoding(p.getActual());
-            String encodedPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
-            //System.out.printf("Actual: %s, Encoded: %s \n",p.getActual(),encodedActual);
-            //System.out.printf("Predicted: %s, Encoded: %s \n",p.getPredicted(),encodedPredicted);
-            double sim1 = j.similarity(p.getActual().toLowerCase(),p.getPredicted().toLowerCase());
-            double sim2 = j.similarity(encodedActual,encodedPredicted);
-            System.out.printf("Sentence: %s String sim: %s and Encoded sim: %s \n",p.getActual(),sim1,sim2);
-            if(sim1>sim2){
-                string++;
-            }
-            else{
-                encoded++;
-            }
-
-        }
-        System.out.printf("Performance (A/E): %s/%s",string, encoded);
-
-
-
-//        Map<String,String> values = new CSVReaderHeaderAware(new FileReader(csv)).readMap();
-//        for(Map.Entry<String,String> e : values.entrySet()){
-//            System.out.println(e.getKey() + "\n"+  e.getValue());
-//        }
 
 
     }
@@ -207,6 +182,93 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void QAPParser(){
+        String csv = System.getProperty("user.dir") + "\\ASR\\QAPairs.csv";
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        List<QAPairs> qap = CSV.readFile(csv);
+        int index = 0;
+        try{
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document d = builder.newDocument();
+
+            Element rootElement = d.createElement("qa_root");
+            d.appendChild(rootElement);
+
+            for(QAPairs pair : qap){
+                Element dialog = d.createElement("dialog");
+                dialog.setAttribute("id",String.valueOf(index));
+                rootElement.appendChild(dialog);
+                Element qlist = d.createElement("questionlist");
+                dialog.appendChild(qlist);
+                Element question = d.createElement("question");
+                qlist.appendChild(question);
+                question.appendChild(d.createTextNode(pair.getActual()));
+                Element alist = d.createElement("answerlist");
+                dialog.appendChild(alist);
+                Element answer = d.createElement("answer");
+                answer.appendChild(d.createTextNode(pair.getAnswer()));
+                alist.appendChild(answer);
+                index++;
+            }
+
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+            DOMSource source = new DOMSource(d);
+            StreamResult result = new StreamResult(new File(System.getProperty("user.dir") + "\\QA.xml"));
+            transformer.transform(source,result);
+
+            StreamResult consoleResult = new StreamResult(System.out);
+            transformer.transform(source,consoleResult);
+
+
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void calculateScores(){
+
+        String csv = System.getProperty("user.dir") + "\\ASR\\QAPairs.csv";
+        List<QAPairs> qap = CSV.readFile(csv);
+        Encode k = new Encode();
+        JaroWinkler j = new JaroWinkler();
+        int encoded = 0;
+        int string = 0;
+        int equal = 0;
+        double improvement = 0.0;
+        DecimalFormat df = new DecimalFormat("#.###");
+        df.setRoundingMode(RoundingMode.CEILING);
+        for(QAPairs p : qap){
+
+            String encodedActual = k.getDoubleMetaphoneEncoding(p.getActual());
+            String encodedPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
+            Double sim1 = j.similarity(p.getActual().toLowerCase(),p.getPredicted().toLowerCase());
+            Double sim2 = j.similarity(encodedActual,encodedPredicted);
+            System.out.printf("%s and %s, dif: %s \n",df.format(sim1),df.format(sim2),df.format(sim2-sim1));
+            improvement=improvement+(sim2-sim1);
+            if(sim1>sim2){
+                string++;
+            }
+            else if(sim1.equals(sim2)){
+                equal++;
+            }
+            else{
+                encoded++;
+            }
+
+        }
+        System.out.printf("Performance (A/E/Q): %s/%s/%s\n",string, encoded, equal);
+        System.out.printf("Improvement: %s", improvement/ qap.size());
     }
 
 
