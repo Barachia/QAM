@@ -4,10 +4,19 @@ import java.util.*;
 import java.io.*;
 import java.nio.file.Paths;
 
+import com.sun.media.sound.InvalidDataException;
 import hmi.qam.util.Encode;
 import hmi.qam.util.Metaphone3;
+import hmi.qam.util.NLP;
 import info.debatty.java.stringsimilarity.JaroWinkler;
+import info.debatty.java.stringsimilarity.StringSimilarityInterface;
 import org.apache.commons.lang3.tuple.Pair;
+import org.apache.lucene.analysis.*;
+import org.apache.lucene.analysis.en.EnglishAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.standard.StandardTokenizer;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.apache.lucene.util.Version;
 
 /**
  * DialogStore is a store containing Dialog elements  
@@ -21,6 +30,7 @@ public class DialogStore{
   private static final String DEFAULT_ANSWER = "I do not understand what you mean.";
 
   ArrayList<String> defaultAnswers = new ArrayList<String>();
+
 
   public DialogStore(){
     dialogs = new ArrayList<Dialog>();
@@ -187,29 +197,63 @@ public class DialogStore{
   /**
      * @param query, the user query
    * @return the Dialog in this DialogStore with a question that best matches the given query
+   * By default the method uses metaphone3 encoding, no stopword removal and JaroWinkler similarity
    */
   public Pair<Dialog,Double> getBestMatchingDialogAndScore(String query){
-    Dialog bestDialog = null;
-    double bestMatch = -0.1;
-    Encode e = new Encode();
-    JaroWinkler jw = new JaroWinkler();
-    for(int i=0;i<dialogs.size();i++){
-      Dialog d = dialogs.get(i);
-      for(int j=0;j<d.questionSize();j++){
-        String q = d.getQuestion(j);
-        String a = e.getEncoding(q);
-        String b = e.getEncoding(query,a.length());
-        double match = jw.similarity(a,b);
-        if (match>bestMatch){
-          bestMatch = match;
-          bestDialog = d;
-        }
+      try {
+          return getBestMatchingDialogAndScore(query,true,false, new JaroWinkler());
+      } catch (IOException e) {
+          e.printStackTrace();
       }
-    }
-    if (bestMatch == 0) {
-      return Pair.of(null, 0.0);
-    }
-    return Pair.of(bestDialog,bestMatch);
+      return null;
+  }
+
+
+  /**
+   * @param query, the user query
+   * @param encode or not
+   * @return the Dialog in this DialogStore with a question that best matches the given query.
+   */
+  public Pair<Dialog,Double> getBestMatchingDialogAndScore(String query, boolean encode, boolean stopwords, StringSimilarityInterface s) throws IOException {
+      Dialog bestDialog = null;
+      double bestMatch = -0.1;
+      String a;
+      String b;
+      StringSimilarityInterface sim = s;
+      Encode e = new Encode();
+
+
+
+
+      if(stopwords){
+          query = NLP.removeStopWords(query);
+      }
+      for(int i=0;i<dialogs.size();i++){
+          Dialog d = dialogs.get(i);
+          for(int j=0;j<d.questionSize();j++){
+              String q = d.getQuestion(j);
+              if(stopwords){
+                  q = NLP.removeStopWords(q);
+              }
+              if(encode){
+                  a = e.getEncoding(query);
+                  b = e.getEncoding(q,a.length());
+              }
+              else{
+                  a = query;
+                  b = q;
+              }
+              double match = s.similarity(a,b);
+              if (match>bestMatch){
+                  bestMatch = match;
+                  bestDialog = d;
+              }
+          }
+      }
+      if (bestMatch == 0) {
+          return Pair.of(null, 0.0);
+      }
+      return Pair.of(bestDialog,bestMatch);
   }
   
   /**

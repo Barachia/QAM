@@ -7,7 +7,8 @@ package hmi.qam.matcher;
 public class TestQAMatcher{
 
   public static void main(String[] args){
-    String filename = "questions.txt";  // should be stored in the resource/qamatcher directory
+    //String filename = "questions.txt";  // should be stored in the resource/qamatcher directory
+    String filename = System.getProperty("user.dir") + "\\QA.xml";
     QuestionMatcher qam= new QuestionMatcher(filename);
     //new QuestionGUI(qam);
     String query = "Hallo";

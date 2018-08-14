@@ -4,12 +4,12 @@ import com.opencsv.CSVReaderHeaderAware;
 import hmi.qam.util.CSV;
 import hmi.qam.util.Encode;
 import hmi.qam.util.QAPairs;
-import info.debatty.java.stringsimilarity.JaroWinkler;
-import info.debatty.java.stringsimilarity.Levenshtein;
+import info.debatty.java.stringsimilarity.*;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.print.DocFlavor;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -35,8 +35,8 @@ public class Main {
         //ArrayList<NodeList> prediction = writeFiles();
         //System.out.println(actual.toArray().toString() + prediction.toArray().toString());
         //testMetaphone();
-        //calculateScores();
-        QAPParser();
+        calculateScores();
+        //QAPParser();
 
 
 
@@ -241,34 +241,62 @@ public class Main {
         String csv = System.getProperty("user.dir") + "\\ASR\\QAPairs.csv";
         List<QAPairs> qap = CSV.readFile(csv);
         Encode k = new Encode();
-        JaroWinkler j = new JaroWinkler();
+
+        computeScores(qap, new NGram(), k);
+
+    }
+
+    private static void computeScores(List<QAPairs> qap, StringSimilarityInterface sim, Encode k){
+
+        List<StringSimilarityInterface> simMeasures = new ArrayList();
+        simMeasures.add(new JaroWinkler());
+        simMeasures.add(new JaroWinkler(-1));
+        simMeasures.add(new NGram(1));
+        simMeasures.add(new NGram(2));
+        simMeasures.add(new NGram(3));
+        simMeasures.add(new Jaccard());
+        simMeasures.add(new Cosine());
+        //For spellchecking
+        simMeasures.add(new Damerau());
+        simMeasures.add(new QGram(1));
+        simMeasures.add(new QGram(2));
+        simMeasures.add(new QGram(3));
+        simMeasures.add(new LongestCommonSubsequence());
+        simMeasures.add(new Levenshtein());
+        simMeasures.add(new SorensenDice());
+
         int encoded = 0;
         int string = 0;
         int equal = 0;
         double improvement = 0.0;
         DecimalFormat df = new DecimalFormat("#.###");
         df.setRoundingMode(RoundingMode.CEILING);
-        for(QAPairs p : qap){
+        for (StringSimilarityInterface j : simMeasures) {
+            for (QAPairs p : qap) {
 
-            String encodedActual = k.getDoubleMetaphoneEncoding(p.getActual());
-            String encodedPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
-            Double sim1 = j.similarity(p.getActual().toLowerCase(),p.getPredicted().toLowerCase());
-            Double sim2 = j.similarity(encodedActual,encodedPredicted);
-            System.out.printf("%s and %s, dif: %s \n",df.format(sim1),df.format(sim2),df.format(sim2-sim1));
-            improvement=improvement+(sim2-sim1);
-            if(sim1>sim2){
-                string++;
-            }
-            else if(sim1.equals(sim2)){
-                equal++;
-            }
-            else{
-                encoded++;
-            }
+                String encodedActual = k.getDoubleMetaphoneEncoding(p.getActual());
+                String encodedPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
+                Double sim1 = j.similarity(p.getActual().toLowerCase(), p.getPredicted().toLowerCase());
+                Double sim2 = j.similarity(encodedActual, encodedPredicted);
+                //System.out.printf("%s and %s, dif: %s \n",df.format(sim1),df.format(sim2),df.format(sim2-sim1));
+                improvement = improvement + (sim2 - sim1);
+                if (sim1 > sim2) {
+                    string++;
+                } else if (sim1.equals(sim2)) {
+                    equal++;
+                } else {
+                    encoded++;
+                }
 
+            }
+            System.out.printf("Performance %s (String/Encoded/Equal): %s/%s/%s\n",j.getClass().toString(),string, encoded, equal);
+            //System.out.printf("Improvement: %s", improvement/ qap.size());
+            encoded = 0;
+            string = 0;
+            equal = 0;
+            improvement = 0.0;
         }
-        System.out.printf("Performance (A/E/Q): %s/%s/%s\n",string, encoded, equal);
-        System.out.printf("Improvement: %s", improvement/ qap.size());
+
     }
 
 

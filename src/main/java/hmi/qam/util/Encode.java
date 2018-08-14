@@ -57,7 +57,7 @@ public class Encode {
      * @return, the M2 encoded string of the original text
      */
     public String getDoubleMetaphoneEncoding(String text){
-        return getDoubleMetaphoneEncoding(text, text.trim().length());
+        return getDoubleMetaphoneEncoding(text, text.length());
     }
 
     public String getDoubleMetaphoneEncoding(String text, int length){

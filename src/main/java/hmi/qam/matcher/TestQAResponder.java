@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.apache.commons.lang3.tuple.Pair;
 
 public class TestQAResponder{
@@ -51,7 +53,7 @@ public class TestQAResponder{
    * @param args 
    */
   public static void main(String[] args) throws IOException{
-      String filename = "C:\\Users\\hmi\\Documents\\ARIA-Beta\\System\\Agent-Core-Final\\DM_Tools\\QAM\\resources\\alice_questions.xml";
+      String filename = System.getProperty("user.dir") + "\\QA.xml";
       String dr_file = "defaultanswers.txt";
       TestQAResponder tr = new TestQAResponder(filename, dr_file);
       String query = "Hallo";
@@ -70,15 +72,18 @@ public class TestQAResponder{
         } else {
             if (match.getValue() >= 0.05) {
                 bestQuery = match.getKey().getQuestion(0);
-                answer = tr.store.answerString(match.getKey(), attName, attValue);
+                //answer = tr.store.answerString(match.getKey(), attName, attValue);
+                List<AnswerType> answers = match.getKey().answers;
+                int randomNum = ThreadLocalRandom.current().nextInt(0, answers.size());
+                answer = answers.get(randomNum).answer;
             } else {
                 bestQuery = "?";
                 answer = tr.store.RandomDefaultAnswer();
             }
         }
         //writer.write(answer + "\n");
-        List<Pair<Dialog, Double>> queries = tr.store.retrieveQueries(query);
-        System.out.println("Queries and scores: " + queries.get(0).getLeft() + queries.get(0).getRight().toString());
+        //List<Pair<Dialog, Double>> queries = tr.store.retrieveQueries(query);
+        //System.out.println("Queries and scores: " + queries.get(0).getLeft() + queries.get(0).getRight().toString());
         System.out.println("Best match query: " + bestQuery);
         System.out.println("Score: " + match.getValue());
         System.out.println("Best answer :" + answer);
