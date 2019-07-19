@@ -1,6 +1,5 @@
 package hmi.qam;
 
-import com.opencsv.CSVReaderHeaderAware;
 import hmi.qam.util.CSV;
 import hmi.qam.util.Encode;
 import hmi.qam.util.QAPairs;
@@ -9,7 +8,6 @@ import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import javax.print.DocFlavor;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -20,11 +18,9 @@ import javax.xml.xpath.*;
 
 import java.io.*;
 import java.math.RoundingMode;
-import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 
 public class Main {
@@ -35,10 +31,14 @@ public class Main {
         //ArrayList<NodeList> prediction = writeFiles();
         //System.out.println(actual.toArray().toString() + prediction.toArray().toString());
         //testMetaphone();
-        calculateScores();
+        //calculateScores();
         //QAPParser();
+        testCurl();
 
 
+    }
+
+    public static void testCurl(){
 
     }
 
@@ -150,8 +150,8 @@ public class Main {
         System.out.println("Double similarity: " + j.similarity(c,d));
 
 
-        String aKey = k.getEncoding(a);
-        String bKey = k.getEncoding(b, a.length());
+        String aKey = k.getMetaphone3Sentence(a);
+        String bKey = k.getMetaphone3Sentence(b, a.length());
         System.out.println("aKey: " + aKey);
         System.out.println("bKey: " + bKey);
         System.out.println("M3 Similarity: " + j.similarity(aKey,bKey));

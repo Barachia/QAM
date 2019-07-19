@@ -50,7 +50,7 @@ public class QuestionMatcher{
 
       sim = JaroWinkler.Similarity(str,lst.get(i));
       //sim = similarity(str,lst.get(i));
-      System.out.println(df.format(sim)+"\t"+lst.get(i));
+      //System.out.println(df.format(sim)+"\t"+lst.get(i));
       if (sim>simMax){
         result = lst.get(i);
         simMax = sim;
@@ -133,23 +133,13 @@ public class QuestionMatcher{
   public List<String> readSentences(String filename) throws IOException, URISyntaxException{
     List<String> lst = new ArrayList<String>();
     String sent;
-    //try{
-    java.net.URL fileURL = QuestionMatcher.class.getResource(filename);
-    System.out.println("fileURL="+fileURL);
-    if (fileURL != null) {
-      java.net.URI fileURI = fileURL.toURI();
-      BufferedReader reader = new BufferedReader(new FileReader(new File(fileURI)));
+    BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
       while ((sent=reader.readLine())!=null){
-        System.out.println(sent);
+        //System.out.println(sent);
         lst.add(sent);
       }
       reader.close();
-    } else {
-      System.err.println("Couldn't find file: " + filename);
-    }
-    //}catch(IOException exc){
-    //	System.out.println(exc.getMessage());
-    //}
+
     return lst;
   }
 

@@ -1,22 +1,17 @@
 package hmi.qam.matcher;
 
-import SpeechAPIDemo.ExampleApp;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import hmi.qam.util.QAMMiddleware;
 import info.debatty.java.stringsimilarity.JaroWinkler;
 import nl.utwente.hmi.middleware.Middleware;
-import nl.utwente.hmi.middleware.MiddlewareListener;
-import nl.utwente.hmi.middleware.activemq.ActiveMQMiddleware;
 import nl.utwente.hmi.middleware.loader.GenericMiddlewareLoader;
-import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
 import java.io.IOException;
-import java.net.URI;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
@@ -44,7 +39,7 @@ public class OnlineResponder {
     public static void main(String[] args) throws JMSException {
         String filename = System.getProperty("user.dir") + "\\QA.xml";
         String dr_file = "defaultanswers.txt";
-        TestQAResponder tqa = new TestQAResponder(filename, dr_file);
+        QA tqa = new QA(filename, dr_file);
         //Middleware mw = new ActiveMQMiddleware("tcp://localhost:61616", "speechFinal", "speechResponse");
 
         //String [] speechArguments = new String[20];

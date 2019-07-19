@@ -2,21 +2,12 @@ package hmi.qam.matcher;
 
 import java.util.*;
 import java.io.*;
-import java.nio.file.Paths;
 
-import com.sun.media.sound.InvalidDataException;
 import hmi.qam.util.Encode;
-import hmi.qam.util.Metaphone3;
 import hmi.qam.util.NLP;
 import info.debatty.java.stringsimilarity.JaroWinkler;
 import info.debatty.java.stringsimilarity.StringSimilarityInterface;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.analysis.standard.StandardTokenizer;
-import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.apache.lucene.util.Version;
 
 /**
  * DialogStore is a store containing Dialog elements  
@@ -236,8 +227,8 @@ public class DialogStore{
                   q = NLP.removeStopWords(q);
               }
               if(encode){
-                  a = e.getEncoding(query);
-                  b = e.getEncoding(q,a.length());
+                  a = e.getMetaphone3Sentence(query);
+                  b = e.getMetaphone3Sentence(q,a.length());
               }
               else{
                   a = query;
@@ -287,17 +278,17 @@ public class DialogStore{
    * @return a value in [0,1] the similarity between two given Strings str1 and str2
    */
   public static double similarity(String str1, String str2){
-//    List<String> ngrams1 = ToolSet.generateNgramsUpto(str1, 3);
-//    List<String> ngrams2 = ToolSet.generateNgramsUpto(str2, 3);
-//    Set<String> interset = intersection(ngrams1,ngrams2);
-//    //System.out.println("Intersection="+interset.toString());
-//    Set<String> union = union(ngrams1,ngrams2);
-//    //System.out.println("Union="+union.toString());
-//    double len1 = interset.size();
-//    double len2 = union.size();
-//    return len1/len2;
+    List<String> ngrams1 = ToolSet.generateNgramsUpto(str1, 3);
+    List<String> ngrams2 = ToolSet.generateNgramsUpto(str2, 3);
+    Set<String> interset = intersection(ngrams1,ngrams2);
+    //System.out.println("Intersection="+interset.toString());
+    Set<String> union = union(ngrams1,ngrams2);
+    //System.out.println("Union="+union.toString());
+    double len1 = interset.size();
+    double len2 = union.size();
+    return len1/len2;
 
-    return JaroWinkler.Similarity(str1.toLowerCase(),str2.toLowerCase());
+    //return JaroWinkler.Similarity(str1.toLowerCase(),str2.toLowerCase());
   }
 
   private static Set<String> intersection(List<String> lst1, List<String> lst2){

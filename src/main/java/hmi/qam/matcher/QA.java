@@ -1,68 +1,57 @@
 package hmi.qam.matcher;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.lang3.tuple.Pair;
 
-public class TestQAResponder{
+/**
+ * The main class to use the QAMatcher
+ */
+public class QA {
 
   //de qa parser etc
   private final DomDialogsParser ddp;
   private final DialogStore store;
 
-  public TestQAResponder(String filename) {
+  public QA(String filename) {
     this.ddp = new DomDialogsParser(filename);
     this.store = this.ddp.getDialogStore();
   }
   
-   public TestQAResponder(String filename, String dr) {
+   public QA(String filename, String dr) {
     this.ddp = new DomDialogsParser(filename, dr);
     this.store = this.ddp.getDialogStore();
   }
    
-    public TestQAResponder(InputStream stream) {
+    public QA(InputStream stream) {
         this.ddp = new DomDialogsParser(stream);
         this.store = this.ddp.getDialogStore();
     }
     
-    public TestQAResponder(InputStream stream, InputStream dfstream) {
+    public QA(InputStream stream, InputStream dfstream) {
         this.ddp = new DomDialogsParser(stream, dfstream);
         this.store = this.ddp.getDialogStore();
     }
 
-  public TestQAResponder() {
-    this.ddp = new DomDialogsParser("E:\\GitHub\\ARIA-DialogueManagement\\dist\\data");
-    this.store = this.ddp.getDialogStore();
-  }
   /**
-   * Don't use this method please
+   * Method for testing
    * @param args 
    */
   public static void main(String[] args) throws IOException{
-      String filename = System.getProperty("user.dir") + "\\QA.xml";
+      //String filename = System.getProperty("user.dir") + "\\QA.xml";
+      String filename = "D:\\Data\\QA Alice\\alice_questions.xml";
       String dr_file = "defaultanswers.txt";
-      TestQAResponder tr = new TestQAResponder(filename, dr_file);
-      String query = "Hallo";
-      System.out.print("Question:");
-      System.out.flush();
-      String attName = "type";
-      String attValue = "certain";
+      QA tr = new QA(filename, dr_file);
+      Scanner scanner = new Scanner(System.in);
+      String query = "";
 
-    while ((query = Console.readString().toLowerCase()) !="exit") {
+      System.out.println("Ready for input!");
+      while(scanner.hasNextLine() && query.toLowerCase() != "exit"){
+          query = scanner.nextLine();
+
         Pair<Dialog, Double> match = tr.store.getBestMatchingDialogAndScore(query);
         String bestQuery;
         String answer;
@@ -91,8 +80,6 @@ public class TestQAResponder{
     }
   }
 
-
-
   public String findMatchingQuery(String query, String type, String value) {
     return this.store.bestMatch(query, type, value);
   }
@@ -110,7 +97,6 @@ public class TestQAResponder{
     if(type == null) {
       type = "type";
     }
-
     if(value == null) {
       value = "certain";
     }
