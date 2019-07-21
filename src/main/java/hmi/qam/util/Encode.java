@@ -7,6 +7,8 @@ import com.opencsv.CSVReaderBuilder;
 import edu.stanford.nlp.util.ConfusionMatrix;
 import org.apache.commons.codec.language.DoubleMetaphone;
 import org.apache.commons.text.similarity.CosineDistance;
+import org.apache.commons.text.similarity.CosineSimilarity;
+import org.apache.commons.text.similarity.JaccardSimilarity;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -214,18 +216,28 @@ public class Encode {
 
     /**
      * Helper for converting a full sentence to a CMU phonetic representation
-     * @param sentence, the sentence to convert
+     * @param word, the sentence to convert
      * @return the phonetic representation
      */
-    public List<String> getCMUDictSentenceList(String sentence){
+    public List<String> getCMUDictSentenceList(String word){
         List<String> cmuPhonetic = new ArrayList();
-        String pSentence = this.getCMUDictSentence(sentence);
-        StringTokenizer tokenizer = new StringTokenizer(pSentence);
+        String pWord = this.getCMUDictSentence(word);
+        StringTokenizer tokenizer = new StringTokenizer(pWord);
         while(tokenizer.hasMoreTokens()){
-            String word = tokenizer.nextToken();
-            cmuPhonetic.add(word);
+            String token = tokenizer.nextToken();
+            cmuPhonetic.add(token);
         }
         return cmuPhonetic;
+    }
+
+    public List<List<String>> getCMUDictSentenceWordList(String sentence){
+        List<List<String>> cmuPhoneticSentence = new ArrayList();
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+        while(tokenizer.hasMoreTokens()){
+            String word = tokenizer.nextToken();
+            cmuPhoneticSentence.add(getCMUDictSentenceList(word));
+        }
+        return cmuPhoneticSentence;
     }
 
     private List<List<String>> loadMatrix(String filename){
@@ -277,20 +289,58 @@ public class Encode {
      * E.g. R AE 1 B and D AE M
      * @param predicted, the string list with predicted phonemes
      * @param actual, the actual phonemes
-     * @return the weighted similarity, based on the work of Woods et al. (2009)
+     * @return the weight, based on the work of Woods et al. (2009)
      */
     public double weightedSimilarity(List<String> predicted, List<String> actual){
-        CosineDistance distance = new CosineDistance();
-        double similarity = 1;
-        for(int i=0;i<predicted.size();i++){
-            double weight = 1;
+        //CosineDistance distance = new CosineDistance();
+        //JaccardSimilarity jaccard = new JaccardSimilarity();
+        double weight = 1;
+        int size = Math.min(predicted.size(),actual.size());
+        for(int i=0;i<size;i++){
             String phoneme = predicted.get(i);
-            String actualPhoneme = actual.get(i);
+            //String actualPhoneme = actual.get(i);
             if(this.initialWeights.containsKey(phoneme)){
                 weight = this.initialWeights.get(phoneme);
             }
-            similarity = similarity * weight * distance.apply(phoneme,actualPhoneme);
+            //similarity = similarity * weight;
         }
+        //String p =  predicted.stream().map(String::valueOf).collect(Collectors.joining());
+        //String a = actual.stream().map(String::valueOf).collect(Collectors.joining());
+        //double similarity = weight * (1-distance.apply(p,a));
+        //double similarity = weight * jaccard.apply(p,a);
+        //return similarity;
+        return weight;
+    }
+
+    public double weightedSentenceSimilarity(List<List<String>> predicted, List<List<String>> actual){
+        double weight = 1;
+        int size = Math.min(predicted.size(),actual.size());
+        for(int i = 0; i <size;i++){
+            List<String> predictedWord = predicted.get(i);
+            List<String> actualWord = actual.get(i);
+            //similarity = similarity + weightedSimilarity(predictedWord,actualWord);
+            weight = weight + weightedSimilarity(predictedWord,actualWord);
+        }
+        String p =  predicted.stream().map(String::valueOf).collect(Collectors.joining());
+        String a = actual.stream().map(String::valueOf).collect(Collectors.joining());
+        double similarity = (weight/predicted.size()) * this.similarity(p, a);
+        return similarity;
+    }
+
+    public double weightedSentenceSimilarity(String predicted, String actual){
+        List<List<String>> cmuWeightedPredictedSentence = this.getCMUDictSentenceWordList(predicted);
+        List<List<String>> cmuWeightedActualSentence = this.getCMUDictSentenceWordList(actual);
+        String cmuPredicted = this.getCMUDictSentence(predicted);
+        String cmuActual = this.getCMUDictSentence(actual);
+        double weight = 1;
+        int size = Math.min(cmuWeightedPredictedSentence.size(),cmuWeightedActualSentence.size());
+        for(int i = 0; i <size;i++){
+            List<String> predictedWord = cmuWeightedPredictedSentence.get(i);
+            List<String> actualWord = cmuWeightedActualSentence.get(i);
+            //similarity = similarity + weightedSimilarity(predictedWord,actualWord);
+            weight = weight + weightedSimilarity(predictedWord,actualWord);
+        }
+        double similarity = (weight/cmuWeightedPredictedSentence.size()) * this.similarity(cmuPredicted, cmuActual);
         return similarity;
     }
 
@@ -315,14 +365,17 @@ public class Encode {
         String actual = "what did the white rabbit say";
         String cmuPredicted = encode.getCMUDictSentence(predicted);
         String cmuActual = encode.getCMUDictSentence(actual);
-        List<String> cmuWeightedPredicted = encode.getCMUDictSentenceList(predicted);
-        List<String> cmuWeightedActual = encode.getCMUDictSentenceList(actual);
+        //List<String> cmuWeightedPredicted = encode.getCMUDictSentenceList(predicted);
+        //List<String> cmuWeightedActual = encode.getCMUDictSentenceList(actual);
+        //List<List<String>> cmuWeightedPredictedSentence = encode.getCMUDictSentenceWordList(predicted);
+        //List<List<String>> cmuWeightedActualSentence = encode.getCMUDictSentenceWordList(actual);
 
         double similarity1 = encode.similarity(predicted,actual);
         double similarity2 = encode.similarity(cmuPredicted,cmuActual);
-        double similarity3 = encode.weightedSimilarity(cmuWeightedPredicted,cmuWeightedActual);
+        double similarity3 = encode.weightedSentenceSimilarity(predicted,actual);
+        //double similarity4 = encode.weightedSentenceSimilarity(cmuWeightedPredictedSentence,cmuWeightedActualSentence);
 
-
+        System.out.println("Done!");
 
 
 
