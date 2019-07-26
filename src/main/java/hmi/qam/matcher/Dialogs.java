@@ -2,17 +2,17 @@ package hmi.qam.matcher;
 import java.util.*;
 
 /**
- * A Dialog is a list of question Strings and a list of AnswerTypes
+ * A Dialogs is a list of question Strings and a list of AnswerTypes
  * Dialogs are the elements of a DialogStore
  */
-public class Dialog{
+public class Dialogs {
 
   String id;
 
   List<AnswerType> answers;
   List<String> questions;
 
-  public Dialog(String d){
+  public Dialogs(String d){
     id = d;
     answers = new ArrayList<AnswerType>();
     questions = new ArrayList<String>();

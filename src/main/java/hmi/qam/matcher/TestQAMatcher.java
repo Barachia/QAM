@@ -11,7 +11,7 @@ public class TestQAMatcher{
   public static void main(String[] args){
     //String filename = "questions.txt";  // should be stored in the resource/qamatcher directory
     //String filename = System.getProperty("user.dir") + "\\QA.xml";
-    String filename = "D:\\Data\\QA Alice\\alice_questions.xml";
+    String filename = "D:\\Data\\QA\\alice_questions.xml";
     QuestionMatcher qam = new QuestionMatcher(filename);
     //new QuestionGUI(qam);
     System.out.println("You can start the session:");

@@ -3,10 +3,6 @@ package hmi.qam.matcher;
 import java.io.IOException;
 import java.io.File;
 import java.io.InputStream;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -36,14 +32,14 @@ public class DomDialogsParser{
    * @param fn the xml file name
    */
   public DomDialogsParser(String fn){
-    //create a store to hold the Dialog objects
+    //create a store to hold the Dialogs objects
     xmlFileName = fn;
     myDialogs = new DialogStore();
     loadStore();
   }
   
    public DomDialogsParser(String fn, String df){
-    //create a store to hold the Dialog objects
+    //create a store to hold the Dialogs objects
     xmlFileName = fn;
     myDialogs = new DialogStore(df);
     loadStore();
@@ -71,7 +67,7 @@ public class DomDialogsParser{
   public void loadStore() {
     //parse the xml file and get the dom object
     parseXmlFile(xmlFileName);
-    //get each dialog element and create a Dialog object
+    //get each dialog element and create a Dialogs object
     // and add this to the DialogStore
     parseDocument();
   }
@@ -142,8 +138,8 @@ public class DomDialogsParser{
         //get the dialog element
         Element el = (Element)nl.item(i);
 
-        //get the Dialog object
-        Dialog d = getDialog(el);
+        //get the Dialogs object
+        Dialogs d = getDialog(el);
 
         //add it to list
         myDialogs.add(d);
@@ -154,15 +150,15 @@ public class DomDialogsParser{
 
   /**
    * take an dialog element and read the values in, create
-   * a Dialog object and return it
+   * a Dialogs object and return it
    * @param el
    * @return
    */
-  private Dialog getDialog(Element el) {
+  private Dialogs getDialog(Element el) {
     //for each <dialog> element get text or int values of id
     String id = el.getAttribute("id");
-    //Create a new Dialog with the values read from the xml nodes
-    Dialog d = new Dialog(id);
+    //Create a new Dialogs with the values read from the xml nodes
+    Dialogs d = new Dialogs(id);
     Element answerlistelement=null;
     NodeList nl = el.getElementsByTagName("answerlist");
     if(nl != null && nl.getLength() > 0) {
@@ -179,7 +175,7 @@ public class DomDialogsParser{
   }
 
   // create and add AnswersType objects to dialog d
-  private void getAnswerList(Element el, Dialog d){
+  private void getAnswerList(Element el, Dialogs d){
     NodeList nl = el.getElementsByTagName("answer");
     if(nl != null && nl.getLength() > 0) {
       for(int i = 0 ; i < nl.getLength();i++) {
@@ -205,7 +201,7 @@ public class DomDialogsParser{
   }
 
   // create and add questions string to dialog d
-  private void getQuestionList(Element el, Dialog d){
+  private void getQuestionList(Element el, Dialogs d){
     //get a nodelist of <question> elements
     NodeList nl = el.getElementsByTagName("question");
     if(nl != null && nl.getLength() > 0) {

@@ -13,6 +13,9 @@ public class QAPairs {
     @CsvBindByName
     private String answer;
 
+    @CsvBindByName
+    private String match;
+
     public String getActual() {
         return actual;
     }
@@ -36,4 +39,8 @@ public class QAPairs {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    public String getMatch(){ return match; }
+
+    public void setMatch(String match){this.match = match;}
 }

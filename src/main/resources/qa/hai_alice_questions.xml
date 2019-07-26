@@ -1,0 +1,821 @@
+<qa_root>
+    <topic>Alice</topic>
+    <dialogs>
+    <dialog id="0000">
+        <answerlist>            
+            <answer type="certain">Alice in Wonderland was written by Charles Dodgson, or Lewis Carroll, which was his pen name</answer>
+        </answerlist>
+        <questionlist>
+            <question>who wrote Alice in Wonderland</question>
+            <question>tell me about the author</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0001">
+        <answerlist>            
+            <answer type="certain">hello my name is James</answer>
+        </answerlist>
+        <questionlist>
+            <question>hello</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0002">
+        <answerlist>            
+            <answer type="certain">he wrote it in 1865</answer>
+        </answerlist>
+        <questionlist>
+            <question>when did Lewis Carroll wrote it</question> 
+            <question>tell me about the book</question> 
+            <question>when was the book first published</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0003">
+        <answerlist>            
+            <answer type="certain">the cat is named Dinah</answer>
+        </answerlist>
+        <questionlist>
+            <question>what is the name of the cat</question>        
+            <question>who is Dinah</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0004">
+        <answerlist>            
+            <answer type="certain">cats eat bats whenever they are able to catch one</answer>
+            <answer type="uncertain">there are known records of cats eating bats</answer>
+        </answerlist>
+        <questionlist>
+            <question>do cats eat bats</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0005">
+        <answerlist>            
+            <answer type="certain">there was jam in the jar</answer>
+        </answerlist>
+        <questionlist>
+            <question>what was the name of the jar</question>            
+            <question>what was written on the jar</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0006">
+        <answerlist>            
+            <answer type="certain">I learned to appreciate books without images when I was a student</answer>
+        </answerlist>
+        <questionlist>
+            <question>tell me about books without images</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0007">
+        <answerlist>            
+            <answer type="certain">I am very known about literature</answer>
+        </answerlist>
+        <questionlist>
+            <question>are you a student</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0008">
+        <answerlist>            
+            <answer type="certain">he was late for a meeting</answer>
+        </answerlist>
+        <questionlist>
+            <question>what was the rabbit wearing</question>
+            <question>Alice's rabbit, what was it wearing</question>
+            <question>why is the rabbit running</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0009">
+        <answerlist>            
+            <answer type="certain">I am an expert of Alice in Wonderland</answer>
+        </answerlist>
+        <questionlist>
+            <question>have you read the whole book of Alice in Wonderland</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0010">
+        <answerlist>            
+            <answer type="certain">the animated picture was made by Walt Disney in 1951</answer>
+        </answerlist>
+        <questionlist>
+            <question>what can you tell me about the animated picture</question>   
+            <question>you mentioned something about Disney</question>         
+            <question>there is a movie about the book, right</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0011">
+        <answerlist>            
+            <answer type="certain">that is hard to say, but given the number of events, it must have been for quite a while</answer>
+        </answerlist>
+        <questionlist>
+            <question>for how long was Alice falling</question>
+            <question>how far did Alice actually fall</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0012">
+        <answerlist>            
+            <answer type="certain">during the first chapter Alice falls into the rabbit hole, she lands in a room with a table and a door</answer>
+        </answerlist>
+        <questionlist>
+            <question>what happens in the first chapter</question>
+            <question>i am wondering where the fall will end</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0013">
+        <answerlist>            
+            <answer type="certain">she tries to chase the rabbit</answer>
+            <answer type="uncertain">the rabbit is actually called White Rabbit. later during the book he thinks Alice is his housemaid</answer>
+        </answerlist>
+        <questionlist>
+            <question>can you tell me something about the character, the white rabbit</question>
+            <question>what type of things happen in the book</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0014">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll also wrote Through the Looking Glass, which is a sequel to Alice's Adventures in Wonderland</answer>
+            <answer type="uncertain">Lewis Carroll wrote 12 books in total. his third book was Alice's Adventures in Wonderland, the book you just read
+            </answer>
+        </answerlist>
+        <questionlist>
+            <question>what other books did the author write</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0015">
+        <answerlist>            
+            <answer type="certain">later in the book Alice meets the white rabbit</answer>
+        </answerlist>
+        <questionlist>
+            <question>i would like to know when Alice meet the white rabbit</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0016">
+        <answerlist>            
+            <answer type="certain">the sister is older than Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>is Alice's sister older than Alice</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0017">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll was a mathematician</answer>
+        </answerlist>
+        <questionlist>
+            <question>tell me something about the author of the book</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0018">
+        <answerlist>            
+            <answer type="certain">the book contains many references to math</answer>
+        </answerlist>
+        <questionlist>
+            <question>is there also math in the book</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0019">
+        <answerlist>            
+            <answer type="certain">the book was written in 1865 by Lewis Carroll</answer>
+            <answer type="uncertain">the book is written in the nonsense genre</answer>
+        </answerlist>
+        <questionlist>
+            <question>are things different in Wonderland</question>
+            <question>tell me about the book</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0020">
+        <answerlist>            
+            <answer type="certain">Dinah was based and named after a cat based on an actual cat owned by Charles Dodgson or Lewis Carroll</answer>            
+        </answerlist>
+        <questionlist>
+            <question>tell me something about the cat</question>
+            <question>does Dinah play a role in this story as well</question>
+            <question>what's the importance of Dinah</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0021">
+        <answerlist>            
+            <answer type="certain">Of course</answer>
+        </answerlist>
+        <questionlist>
+            <question>do you like the book</question>
+            <question>do you recommend reading the book</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0022">
+        <answerlist>            
+            <answer type="certain">the book is written in the genre of nonsense</answer>
+        </answerlist>
+        <questionlist>
+            <question>what type of book is it</question>
+            <question>is the book a kind of fiction</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0023">
+        <answerlist>            
+            <answer type="certain">Dinah is the cat of Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>I was wondering about her cat Dinah</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0024">
+        <answerlist>            
+            <answer type="certain">Alice was based on Alice Liddell, a child friend of Lewis Carroll</answer>
+        </answerlist>
+        <questionlist>            
+            <question>was the book based on a true story</question> 
+            <question>how did the author come up with the idea of the book</question>   
+        </questionlist>
+    </dialog>
+    <dialog id="0025">
+        <answerlist>            
+            <answer type="certain">there are no known records of bats eating cats</answer>
+        </answerlist>
+        <questionlist>
+            <question>do bats eat cats</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0026">
+        <answerlist>            
+            <answer type="certain">the jar contained orange marmalade</answer>
+        </answerlist>
+        <questionlist>            
+            <question>tell me about the orange marmalade</question>          
+        </questionlist>
+    </dialog>
+    <dialog id="0027">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll was a mathematician, he knew that gravity was different than this</answer>
+        </answerlist>
+        <questionlist>
+            <question>why was the jar falling so slowly</question>    
+            <question>didn't Lewis notice it was against the law of physics</question>        
+        </questionlist>
+    </dialog>
+    <dialog id="0028">
+        <answerlist>            
+            <answer type="certain">Alice reached Wonderland</answer>
+        </answerlist>
+        <questionlist>
+            <question>did Alice really reach the centre of the Earth, as she expected</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0029">
+        <answerlist>            
+            <answer type="certain">Wonderland is down the rabbit hole</answer>
+        </answerlist>
+        <questionlist>
+            <question>where is Wonderland</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0030">
+        <answerlist>            
+            <answer type="certain">there are different rules of gravity</answer>
+        </answerlist>
+        <questionlist>
+            <question>does Wonderland have the same physics rules as we have here</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0031">
+        <answerlist>            
+            <answer type="certain">Alice has a sister</answer>
+        </answerlist>
+        <questionlist>
+            <question>does Alice have family</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0032">
+        <answerlist>            
+            <answer type="certain">it is against the law of physics to drop a jar in a free fall</answer>
+        </answerlist>
+        <questionlist>
+            <question>wouldn't the jar fall as quickly as she falls</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0033">
+        <answerlist>            
+            <answer type="certain">Alice was interested in what the rabbit was doing</answer>
+        </answerlist>
+        <questionlist>
+            <question>why did Alice follow the rabbit</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0034">
+        <answerlist>            
+            <answer type="certain">the author died in 1906</answer>
+        </answerlist>
+        <questionlist>
+            <question>is the author still alive</question>
+            <question>when did the author die</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0035">
+        <answerlist>            
+            <answer type="certain">the White Rabbit has a pocket watch</answer>
+        </answerlist>
+        <questionlist>
+            <question>what does the White Rabbit have</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0036">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll was born in 1838</answer>
+        </answerlist>
+        <questionlist>
+            <question>when was Lewis Carroll born</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0037">
+        <answerlist>            
+            <answer type="certain">he said i shall be late</answer>
+        </answerlist>
+        <questionlist>
+            <question>what did the rabbit say to itself</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0038">
+        <answerlist>            
+            <answer type="certain">many things in the book are impossible or done in an unusual or inverted way</answer>
+        </answerlist>
+        <questionlist>
+            <question>can you tell me more about the nonsense genre</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0039">
+        <answerlist>            
+            <answer type="certain">the rabbit has pink eyes</answer>
+        </answerlist>
+        <questionlist>
+            <question>what colour were the rabbit's eyes</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0040">
+        <answerlist>            
+            <answer type="certain">there is a live action movie made by Tim Burton in 2010</answer>
+        </answerlist>
+        <questionlist>
+            <question>do you know any more cool facts</question>
+            <question>was there another movie after</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0041">
+        <answerlist>            
+            <answer type="certain">sometimes bats fall on the floor</answer>
+        </answerlist>
+        <questionlist>
+            <question>how do cats catch bats</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0042">
+        <answerlist>            
+            <answer type="certain">that is a possibility</answer>
+        </answerlist>
+        <questionlist>
+            <question>did Dinah the cat eat bats</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0043">
+        <answerlist>            
+            <answer type="certain">she fell in a room with a table with a key and one door</answer>
+        </answerlist>
+        <questionlist>
+            <question>what happened when Alice got to the bottom of the rabbit hole</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0044">
+        <answerlist>            
+            <answer type="certain">Alice is 8 years old. she owns a cat named Dinah. she is both curious and rational during the events in this book</answer>
+        </answerlist>
+        <questionlist>
+            <question>i would like to know something about Alice</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0045">
+        <answerlist>            
+            <answer type="certain">the caterpillar is a character described later during the book</answer>
+        </answerlist>
+        <questionlist>
+            <question>i would like to know something about the caterpillar</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0046">
+        <answerlist>            
+            <answer type="certain">the caterpillar keeps asking who Alice is</answer>
+        </answerlist>
+        <questionlist>
+            <question>i would like to know more about the caterpillar</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0047">
+        <answerlist>            
+            <answer type="certain">Alice won't answer that question</answer>
+        </answerlist>
+        <questionlist>
+            <question>what does Alice say as a reply to the caterpillar</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0048">
+        <answerlist>            
+            <answer type="certain">because the caterpillar is being rude</answer>
+        </answerlist>
+        <questionlist>
+            <question>why doesn't Alice answer the question of the caterpillar</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0049">
+        <answerlist>            
+            <answer type="certain">his first book was A Tangled Tale</answer>
+        </answerlist>
+        <questionlist>
+            <question>what was the author's first book</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0050">
+        <answerlist>            
+            <answer type="certain">Alice wonders if she was dreaming all the time or not</answer>
+        </answerlist>
+        <questionlist>
+            <question>how does the story of Alice end</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0051">
+        <answerlist>            
+            <answer type="certain">the Cheshire Cat is someone who helps Alice find directions</answer>
+        </answerlist>
+        <questionlist>
+            <question>what was the name of the cat in Wonderland</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0052">
+        <answerlist>            
+            <answer type="certain">the Cheshire Cat sometimes loses his body</answer>
+        </answerlist>
+        <questionlist>
+            <question>is the Cheshire Cat strange</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0053">
+        <answerlist>            
+            <answer type="certain">the Cheshire Cat tries to scare Alice</answer>
+            <answer type="uncertain">he likes to trick people</answer>
+        </answerlist>
+        <questionlist>
+            <question>why does the Cheshire Cat sometimes loses it body</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0054">
+        <answerlist>            
+            <answer type="certain">he was 65 years old when he died in 1898</answer>
+        </answerlist>
+        <questionlist>
+            <question>how old was Lewis Carroll when he died</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0055">
+        <answerlist>            
+            <answer type="certain">he wrote Alice in 1833</answer>
+        </answerlist>
+        <questionlist>
+            <question>when did the author start writing</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0056">
+        <answerlist>            
+            <answer type="certain">you're welcome</answer>
+        </answerlist>
+        <questionlist>
+            <question>thank you</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0057">
+        <answerlist>            
+            <answer type="certain">the queen likes to play cricket</answer>
+        </answerlist>
+        <questionlist>
+            <question>I would like to know something about the queen</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0057">
+        <answerlist>            
+            <answer type="certain">the queen wants to convict Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>what happens with the queen</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0058">
+        <answerlist>            
+            <answer type="certain">Alice did nothing wrong</answer>
+        </answerlist>
+        <questionlist>
+            <question>what did Alice do wrong</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0059">
+        <answerlist>            
+            <answer type="certain">the king is not as mean as the queen</answer>
+        </answerlist>
+        <questionlist>
+            <question>I would like to know something about the king</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0060">
+        <answerlist>            
+            <answer type="certain">the king wants to help Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>Tell me more about the king</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0061">
+        <answerlist>            
+            <answer type="certain">the Cheshire cat plays tricks with the queen. the queen blamed Alice for doing so</answer>
+        </answerlist>
+        <questionlist>
+            <question>why does the Queen want to convict Alice</question>
+            <question>what does the Cheshire cat do</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0062">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll wrote books for both adults and children</answer>
+        </answerlist>
+        <questionlist>
+            <question>did the author only write books for children or also for adults</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0063">
+        <answerlist>            
+            <answer type="certain">the name of the White Rabbit was W. Rabbit</answer>
+        </answerlist>
+        <questionlist>
+            <question>what is the name of the white rabbit</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0064">
+        <answerlist>            
+            <answer type="certain">he is the only rabbit in Alice in Wonderland</answer>
+        </answerlist>
+        <questionlist>
+            <question>was the white rabbit the only rabbit in the story</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0065">
+        <answerlist>            
+            <answer type="certain">normally cats eat mice and birds</answer>
+        </answerlist>
+        <questionlist>
+            <question>what do cats eat normally</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0066">
+        <answerlist>            
+            <answer type="certain">in Alice in Wonderland there is a mouse that is afraid of Dinah, the cat</answer>
+            <answer type="uncertain">in Alice in Wonderland" there is a bird afraid of Dinah</answer>
+        </answerlist>
+        <questionlist>
+            <question>are there mice and birds in Wonderland</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0067">
+        <answerlist>            
+            <answer type="certain">the tunnel was very deep indeed</answer>            
+        </answerlist>
+        <questionlist>
+            <question>Was the tunnel very deep</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0068">
+        <answerlist>            
+            <answer type="certain">Alice drinks a potion and becomes smaller</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what does Alice do next in the room</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0069">
+        <answerlist>            
+            <answer type="certain">Alice was not afraid of the fall</answer>            
+        </answerlist>
+        <questionlist>
+            <question>was Alice afraid for the fall</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0070">
+        <answerlist>            
+            <answer type="certain">the door told her to drink the potion</answer>            
+        </answerlist>
+        <questionlist>
+            <question>how did Alice know she had to drink the potion to become smaller</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0071">
+        <answerlist>            
+            <answer type="certain">Alice continued to chase the rabbit</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what happened after Alice went through the door</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0072">
+        <answerlist>            
+            <answer type="certain">she will meet the rabbit at the rabbit's house</answer>            
+        </answerlist>
+        <questionlist>
+            <question>did Alice get the rabbit</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0073">
+        <answerlist>            
+            <answer type="certain">Alice goes to the king and queen of Wonderland</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what happens after Alice went through the door</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0074">
+        <answerlist>            
+            <answer type="certain">the rabbit lives in Wonderland</answer>            
+        </answerlist>
+        <questionlist>
+            <question>where does the rabbit live</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0075">
+        <answerlist>            
+            <answer type="certain">Wonderland is filled with non-sensical things</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what is so wonderful about Wonderland</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0076">
+        <answerlist>            
+            <answer type="certain">Alice grows big when she is at the rabbit's house</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what does Alice do at the rabbit's house</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0077">
+        <answerlist>            
+            <answer type="certain">Alice and the queen play cricket together</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what is the story of Alice and the queen</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0078">
+        <answerlist>            
+            <answer type="certain">Alice meets the queen at the palace</answer>            
+        </answerlist>
+        <questionlist>
+            <question>where does Alice meet the queen</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0079">
+        <answerlist>            
+            <answer type="certain">Alice was just looking for the rabbit</answer>            
+        </answerlist>
+        <questionlist>
+            <question>did the Cheshire Cat trick Alice into going to the palace</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0080">
+        <answerlist>            
+            <answer type="certain">Alice wonders if she was sleeping or not</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what happens after Alice meets the queen</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0081">
+        <answerlist>            
+            <answer type="certain">Alice in Wonderland is open-ended</answer>            
+        </answerlist>
+        <questionlist>
+            <question>is Alice in Wonderland an open-ended story</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0082">
+        <answerlist>            
+            <answer type="certain">the animated picture by Walt Disney is similar to the book</answer>            
+        </answerlist>
+        <questionlist>
+            <question>should I read the book or watch the movie</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0083">
+        <answerlist>            
+            <answer type="certain">the Cheshire cat has a scary grin</answer>            
+        </answerlist>
+        <questionlist>
+            <question>what does the Cheshire cat look like</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0084">
+        <answerlist>            
+            <answer type="certain">Alice is trapped inside his house</answer>            
+        </answerlist>
+        <questionlist>
+            <question>why would the white rabbit think Alice is a housemaid</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0085">
+        <answerlist>            
+            <answer type="certain">Alice often shrinks and grows. in the rabbit's house she grows</answer>            
+        </answerlist>
+        <questionlist>
+            <question>how did Alice become trapped in the rabbit's house</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0086">
+        <answerlist>            
+            <answer type="certain">Alice often drinks drinks which make her larger or smaller. besides drinks she also eats other things that do the same</answer>            
+        </answerlist>
+        <questionlist>
+            <question>how does Alice grow and shrink</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0087">
+        <answerlist>            
+            <answer type="certain">Alice was based on a girl named Alice Liddell. she was also 8 years old</answer>
+        </answerlist>
+        <questionlist>
+            <question>why is Alice 8 years old</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0088">
+        <answerlist>            
+            <answer type="certain">the book was written 1836</answer>
+        </answerlist>
+        <questionlist>
+            <question>when was the book written</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0089">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll was 33 when he wrote Alice's Adventures in Wonderland. it took him one year to write</answer>
+        </answerlist>
+        <questionlist>
+            <question>what age was Lewis Carroll when he started to write Alice in Wonderland and how much time did it take him to write it</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0090">
+        <answerlist>            
+            <answer type="certain">the piece of cake lets Alice grow</answer>
+        </answerlist>
+        <questionlist>
+            <question>does the piece of cake makes Alice bigger or smaller</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0091">
+        <answerlist>            
+            <answer type="certain">this is done by multiple different objects such as drinks, drawings and candy</answer>
+        </answerlist>
+        <questionlist>
+            <question>what makes Alice smaller</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0092">
+        <answerlist>            
+            <answer type="certain">the book was very successful within ten years. it was translated to 45 different languages</answer>
+        </answerlist>
+        <questionlist>
+            <question>was the book successful</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0093">
+        <answerlist>            
+            <answer type="certain">Dinah is a girl</answer>
+        </answerlist>
+        <questionlist>
+            <question>is Dinah a female or girl</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0094">
+        <answerlist>            
+            <answer type="certain">Alice Liddell was the daughter of his employer</answer>
+        </answerlist>
+        <questionlist>
+            <question>what was the relation between Alice Liddell and Lewis Carroll</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0095">
+        <answerlist>            
+            <answer type="certain">Lewis Carroll worked at the university as a mathematician</answer>
+        </answerlist>
+        <questionlist>
+            <question>where did Lewis Carroll work</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0095">
+        <answerlist>            
+            <answer type="certain">the White Rabbit tries to save Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>what happens during the trial</question>            
+        </questionlist>
+    </dialog>
+
+
+
+</dialogs>
+</qa_root>

@@ -3,61 +3,35 @@ package hmi.qam.matcher;
 import java.util.*;
 import java.io.*;
 
-import hmi.qam.util.Encode;
 import hmi.qam.util.NLP;
-import info.debatty.java.stringsimilarity.JaroWinkler;
+import info.debatty.java.stringsimilarity.Cosine;
 import info.debatty.java.stringsimilarity.StringSimilarityInterface;
 import org.apache.commons.lang3.tuple.Pair;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
- * DialogStore is a store containing Dialog elements  
+ * DialogStore is a store containing Dialogs elements
  * that contains matching questiona and answers pairs
  * The main public method is bestMatch.
  * The DialogStore is created and filled by reading an xml file with a DomDialogParser
  */
+@XmlRootElement(name="dialogs")
 public class DialogStore{
 
-  List<Dialog> dialogs;
+  private List<Dialogs> dialogs;
   private static final String DEFAULT_ANSWER = "I do not understand what you mean.";
-
+  //private Encode e;
   ArrayList<String> defaultAnswers = new ArrayList<String>();
 
-
   public DialogStore(){
-    dialogs = new ArrayList<Dialog>();
-
-    // Load dictionary of default answers
-    //String dafilename = System.getProperty("user.dir") + "\\resources\\defaultanswers.txt";
-    String dafilename = "defaultanswers.txt";
-    //System.out.println(Paths.get(".").toAbsolutePath().normalize().toString());
-    System.out.println("Default replies: " + dafilename);
-    try {
-      BufferedReader br = new BufferedReader(new FileReader(dafilename));
-      String line;
-      while ((line = br.readLine()) != null)
-      {
-        defaultAnswers.add(line);
-      }
-    }
-    catch (FileNotFoundException e)
-    {
-      System.out.println("Dialogue store: file not found");
-    }
-    catch (IOException e)
-    {
-      System.out.println("IOexception");
-    }
-
-    //defaultAnswers.add("Huh?");
-    //defaultAnswers.add("What?");
-    //System.out.println(Arrays.toString(defaultAnswers.toArray()));
+      this("defaultanswers.txt");
   }
   
   public DialogStore(InputStream dfstream) {
-		dialogs = new ArrayList<Dialog>();
-
-
-
+		dialogs = new ArrayList();
+		//this.e = new Encode();
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(dfstream));
 			String line;
@@ -77,12 +51,11 @@ public class DialogStore{
 	}
   
    public DialogStore(String dr_file){
-    dialogs = new ArrayList<Dialog>();
-
+    dialogs = new ArrayList();
+    //this.e = new Encode();
     // Load dictionary of default answers
     //String dafilename = System.getProperty("user.dir") + "\\resources\\defaultanswers.txt";
     String dafilename = dr_file;
-    //System.out.println(Paths.get(".").toAbsolutePath().normalize().toString());
     System.out.println("Default replies: " + dr_file);
     try {
       BufferedReader br = new BufferedReader(new FileReader(dafilename));
@@ -94,16 +67,14 @@ public class DialogStore{
     }
     catch (FileNotFoundException e)
     {
-      System.out.println("Dialogue store: file not found");
+      System.err.println("Dialogue store: file not found: " + e);
+      defaultAnswers.add(DEFAULT_ANSWER);
     }
     catch (IOException e)
     {
-      System.out.println("IOexception");
+      System.err.println("IOexception: " + e);
+      defaultAnswers.add(DEFAULT_ANSWER);
     }
-
-    //defaultAnswers.add("Huh?");
-    //defaultAnswers.add("What?");
-    //System.out.println(Arrays.toString(defaultAnswers.toArray()));
   }
 
   //get a random default answer from the list of default answers
@@ -113,11 +84,10 @@ public class DialogStore{
     {
       return DEFAULT_ANSWER;
     }
-
     return defaultAnswers.get((int)(Math.random() * (defaultAnswers.size())));
   }
 
-  public void add(Dialog d){ dialogs.add(d);
+  public void add(Dialogs d){ dialogs.add(d);
   }
 
   public int size(){
@@ -137,7 +107,7 @@ public class DialogStore{
   /**
    * @return String that is answer of dialog with given id and attribute name and attribute value
    */
-  public String answerString(Dialog d, String attName, String attValue){
+  public String answerString(Dialogs d, String attName, String attValue){
     if (d == null) {return RandomDefaultAnswer();};
     for(int j=0;j<d.answerSize();j++){
       AnswerType at = d.getAnswer(j);
@@ -153,7 +123,7 @@ public class DialogStore{
    */
   public String bestMatch(String question, String attName, String attValue){
     String answer = "";
-    Dialog d = getBestMatchingDialog(question);
+    Dialogs d = getBestMatchingDialog(question);
     if (d!=null){
       answer = answerString(d, attName , attValue );
     }else{
@@ -163,36 +133,46 @@ public class DialogStore{
   }
 
   /**
-   * @return the Dialog in this DialogStore with a question that best matches the given query
+   * Computes for a query the best match with the comparable queries
+   * @return the Dialogs in this DialogStore with a question that best matches the given query
    */
-  public Dialog getBestMatchingDialog(String query){
-    Dialog bestDialog = null;
+  public Dialogs getBestMatchingDialog(String query, int ngram){
+    Dialogs bestDialogs = null;
     double bestMatch = -0.1;
     for(int i=0;i<dialogs.size();i++){
-      Dialog d = dialogs.get(i);
+      Dialogs d = dialogs.get(i);
       for(int j=0;j<d.questionSize();j++){
         String q = d.getQuestion(j);
-        double match = similarity(query, q);
+        double match = similarity(query, q,ngram);
         if (match>bestMatch){
           bestMatch = match;
-          bestDialog = d;
+          bestDialogs = d;
         }
       }
     }
     if (bestMatch == 0) {
       return null;
     }
-    return bestDialog;
+    return bestDialogs;
   }
+
+    /**
+     * Computes for a query the best match with the comparable queries
+     * @return the Dialogs in this DialogStore with a question that best matches the given query
+     */
+    public Dialogs getBestMatchingDialog(String query){
+       return getBestMatchingDialog(query,0);
+    }
+
   
   /**
      * @param query, the user query
-   * @return the Dialog in this DialogStore with a question that best matches the given query
-   * By default the method uses metaphone3 encoding, no stopword removal and JaroWinkler similarity
+   * @return the Dialogs in this DialogStore with a question that best matches the given query
+   * By default the method uses no encoding, no stopword removal and Cosine similarity
    */
-  public Pair<Dialog,Double> getBestMatchingDialogAndScore(String query){
+  public Pair<Dialogs,Double> getBestMatchingDialogAndScore(String query, int ngram){
       try {
-          return getBestMatchingDialogAndScore(query,true,false, new JaroWinkler());
+          return getBestMatchingDialogAndScore(query,"grapheme",false, new Cosine(), ngram);
       } catch (IOException e) {
           e.printStackTrace();
       }
@@ -200,51 +180,49 @@ public class DialogStore{
   }
 
 
+    public Pair<Dialogs,Double> getBestMatchingDialogAndScore(String query){
+        return getBestMatchingDialogAndScore(query,0);
+    }
+
+
   /**
-   * @param query, the user query
-   * @param encode or not
-   * @return the Dialog in this DialogStore with a question that best matches the given query.
+   * @param query, the user query to find a match for
+   * @param encode, could be 'grapheme', 'cmu', 'wcmu', 'dm' or 'm3'
+   * @param stopwords, true if to remove stopwords from the query and queries matched against
+   * @param s, the String similarity you would like to use, for example JaroWinkler or CosineSimilarity
+   * @param ngram, the number of ngrams for ngram comparison. If 0, no ngrams are used
+   * @return the Dialogs in this DialogStore with a question that best matches the given query.
    */
-  public Pair<Dialog,Double> getBestMatchingDialogAndScore(String query, boolean encode, boolean stopwords, StringSimilarityInterface s) throws IOException {
-      Dialog bestDialog = null;
+  public Pair<Dialogs,Double> getBestMatchingDialogAndScore(String query, String encode, boolean stopwords, StringSimilarityInterface s, int ngram) throws IOException {
+      Dialogs bestDialogs = null;
       double bestMatch = -0.1;
+      double match = 0.0;
       String a;
       String b;
       StringSimilarityInterface sim = s;
-      Encode e = new Encode();
-
-
-
-
       if(stopwords){
           query = NLP.removeStopWords(query);
       }
       for(int i=0;i<dialogs.size();i++){
-          Dialog d = dialogs.get(i);
+          Dialogs d = dialogs.get(i);
           for(int j=0;j<d.questionSize();j++){
               String q = d.getQuestion(j);
               if(stopwords){
                   q = NLP.removeStopWords(q);
               }
-              if(encode){
-                  a = e.getMetaphone3Sentence(query);
-                  b = e.getMetaphone3Sentence(q,a.length());
-              }
-              else{
-                  a = query;
-                  b = q;
-              }
-              double match = s.similarity(a,b);
+              a = query;
+              b = q;
+              match = DialogStore.similarity(a,b,ngram);
               if (match>bestMatch){
                   bestMatch = match;
-                  bestDialog = d;
+                  bestDialogs = d;
               }
           }
       }
       if (bestMatch == 0) {
           return Pair.of(null, 0.0);
       }
-      return Pair.of(bestDialog,bestMatch);
+      return Pair.of(bestDialogs,bestMatch);
   }
   
   /**
@@ -252,15 +230,15 @@ public class DialogStore{
    * @param query, the user query
    * @return , the list of queries with similarity queries to the user query
    */
-  public List<Pair<Dialog, Double>> retrieveQueries(String query){
+  public List<Pair<Dialogs, Double>> retrieveQueries(String query, StringSimilarityInterface similarityInterface, int ngram){
       
-      List<Pair<Dialog,Double>> queries = new ArrayList();      
+      List<Pair<Dialogs,Double>> queries = new ArrayList();
       for(int i=0;i<dialogs.size();i++){
-          Dialog d = dialogs.get(i);
+          Dialogs d = dialogs.get(i);
           double max = 0.0;
           for(int j=0;j<d.questionSize();j++){
               String q = d.getQuestion(j);
-              double match = similarity(query,q);
+              double match = similarity(query,q,ngram);
               if(match > max)
                   max = match;
           }
@@ -269,17 +247,21 @@ public class DialogStore{
       Collections.sort(queries,new DialogComparator().reversed());
       return queries;
   }
-  
 
-  /**
-   * Computes similarity between two Strings
-   * The current implementation computes the relative size of the intersection of the sets of n-grams
-   * of words in the two given strings
-   * @return a value in [0,1] the similarity between two given Strings str1 and str2
-   */
-  public static double similarity(String str1, String str2){
-    List<String> ngrams1 = ToolSet.generateNgramsUpto(str1, 3);
-    List<String> ngrams2 = ToolSet.generateNgramsUpto(str2, 3);
+    public List<Pair<Dialogs, Double>> retrieveQueries(String query){
+      return this.retrieveQueries(query,new Cosine(),0);
+    }
+
+
+    /**
+     * Computes similarity between two Strings
+     * The current implementation computes the relative size of the intersection of the sets of n-grams
+     * of words in the two given strings
+     * @return a value in [0,1] the similarity between two given Strings str1 and str2
+     */
+  public static double similarity(String str1, String str2, int maxGramSize){
+    List<String> ngrams1 = ToolSet.generateNgramsUpto(str1, maxGramSize);
+    List<String> ngrams2 = ToolSet.generateNgramsUpto(str2, maxGramSize);
     Set<String> interset = intersection(ngrams1,ngrams2);
     //System.out.println("Intersection="+interset.toString());
     Set<String> union = union(ngrams1,ngrams2);
@@ -287,9 +269,34 @@ public class DialogStore{
     double len1 = interset.size();
     double len2 = union.size();
     return len1/len2;
-
-    //return JaroWinkler.Similarity(str1.toLowerCase(),str2.toLowerCase());
   }
+
+    /**
+     * Computes similarity between two Strings
+     * The current implementation computes the relative size of the intersection of the sets of n-grams
+     * of words in the two given strings
+     * @return a value in [0,1] the similarity between two given Strings str1 and str2
+     */
+//    public double weightedSimilarity(String str1, String str2, int maxGramSize){
+//        List<String> ngrams1 = ToolSet.generateNgramsUpto(str1, maxGramSize);
+//        List<String> ngrams2 = ToolSet.generateNgramsUpto(str2, maxGramSize);
+//        Set<String> intersect = intersection(ngrams1,ngrams2);
+//        Set<String> union = union(ngrams1,ngrams2);
+//        Iterator<String> it = intersect.iterator();
+//        List<Double> weights = new ArrayList();
+//        if(it.hasNext()){
+//            String next = it.next();
+//            weights.add(this.e.getWeight(next,true));
+//        }
+//        while(it.hasNext()){
+//            String next = it.next();
+//            weights.add(this.e.getWeight(next,false));
+//        }
+//        double weight = weights.stream().collect(Collectors.summingDouble(d -> d))/weights.size();
+//        double len1 = intersect.size();
+//        double len2 = union.size();
+//        return weight*(len1/len2);
+//    }
 
   private static Set<String> intersection(List<String> lst1, List<String> lst2){
     Set<String> s1 = new TreeSet<String>(lst1);
@@ -305,11 +312,20 @@ public class DialogStore{
     return s1;
   }
   
-  public class DialogComparator implements Comparator<Pair<Dialog,Double>>{
+  public class DialogComparator implements Comparator<Pair<Dialogs,Double>>{
       @Override
-      public int compare(Pair<Dialog,Double> p1, Pair<Dialog,Double> p2){
+      public int compare(Pair<Dialogs,Double> p1, Pair<Dialogs,Double> p2){
           return p1.getValue().compareTo(p2.getValue());
       }
+  }
+
+  public List<Dialogs> getDialogs(){
+        return this.dialogs;
+  }
+
+  @XmlElement(name="dialog")
+  public void setListOfDialogs(ArrayList<Dialogs> listOfDialogs){
+      this.dialogs = listOfDialogs;
   }
 
 }

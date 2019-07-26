@@ -20,20 +20,22 @@ import java.io.*;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class Main {
 
     public static void main (String[] args) throws ParserConfigurationException, SAXException, XPathExpressionException, IOException {
 
-        //ArrayList<NodeList> actual = readFiles();
-        //ArrayList<NodeList> prediction = writeFiles();
-        //System.out.println(actual.toArray().toString() + prediction.toArray().toString());
-        //testMetaphone();
-        //calculateScores();
-        //QAPParser();
-        testCurl();
+//        ArrayList<NodeList> actual = readFiles();
+//        ArrayList<NodeList> prediction = writeFiles();
+//        System.out.println(actual.toArray().toString() + prediction.toArray().toString());
+//        testMetaphone();
+        calculateScores();
+//        QAPParser();
+//        testCurl();
 
 
     }
@@ -246,6 +248,12 @@ public class Main {
 
     }
 
+    /**
+     * Method that computes the scores for each question compared to each other question, for each similarity measure and each type of encoding
+     * @param qap, the QA pairs
+     * @param sim, the similarity metrics to be used
+     * @param k, the encoding object for encoding the different types
+     */
     private static void computeScores(List<QAPairs> qap, StringSimilarityInterface sim, Encode k){
 
         List<StringSimilarityInterface> simMeasures = new ArrayList();
@@ -268,34 +276,45 @@ public class Main {
         int encoded = 0;
         int string = 0;
         int equal = 0;
-        double improvement = 0.0;
+        //double improvement = 0.0;
         DecimalFormat df = new DecimalFormat("#.###");
+        //List of questions: For all the questions we want to measure
+        // List of other questions: how they compare to all other questions
+        //  List of similarity measure: based on several similarity measures
+        //   List of encoding measure: by using different types of encodings        
         df.setRoundingMode(RoundingMode.CEILING);
-        for (StringSimilarityInterface j : simMeasures) {
-            for (QAPairs p : qap) {
-
-                String encodedActual = k.getDoubleMetaphoneEncoding(p.getActual());
-                String encodedPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
-                Double sim1 = j.similarity(p.getActual().toLowerCase(), p.getPredicted().toLowerCase());
-                Double sim2 = j.similarity(encodedActual, encodedPredicted);
-                //System.out.printf("%s and %s, dif: %s \n",df.format(sim1),df.format(sim2),df.format(sim2-sim1));
-                improvement = improvement + (sim2 - sim1);
-                if (sim1 > sim2) {
-                    string++;
-                } else if (sim1.equals(sim2)) {
-                    equal++;
-                } else {
-                    encoded++;
+        Map<QAPairs,Map<QAPairs,Map<QAPairs,Map<String,Double>>>> similarities = new HashMap();
+        for(QAPairs p : qap){
+            Map<QAPairs,Map<QAPairs,Map<String,Double>>> questions = new HashMap();
+            for(int i=0; i<qap.size();i++){
+                Map<QAPairs,Map<String,Double>> comparisons = new HashMap();                
+                for(StringSimilarityInterface j : simMeasures){
+                    Map<String,Double> similarity = new HashMap();
+                    similarity.put("grapheme",j.similarity(p.getActual(),p.getPredicted()));
+                    String dmActual = k.getDoubleMetaphoneEncoding(p.getActual());
+                    String dmPredicted = k.getDoubleMetaphoneEncoding(p.getPredicted());
+                    similarity.put("dm",j.similarity(dmActual,dmPredicted));
+                    String m3Actual = k.getMetaphone3Sentence(p.getActual());
+                    String m3Predicted = k.getMetaphone3Sentence(p.getPredicted());
+                    similarity.put("m3",j.similarity(m3Actual,m3Predicted));
+                    String cmuActual = k.getCMUDictSentence(p.getActual());
+                    String cmuPredicted = k.getCMUDictSentence(p.getPredicted());
+                    similarity.put("cmu",j.similarity(cmuActual,cmuPredicted));
+                    similarity.put("wcmu",k.weightedSentenceSimilarity(cmuPredicted,cmuPredicted));
+                    comparisons.put(qap.get(i),similarity);
                 }
-
+                questions.put(qap.get(i),comparisons);
             }
-            System.out.printf("Performance %s (String/Encoded/Equal): %s/%s/%s\n",j.getClass().toString(),string, encoded, equal);
+            similarities.put(p,questions);
+        }
+
+            //System.out.printf("Performance %s (String/Encoded/Equal): %s/%s/%s\n",j.getClass().toString(),string, encoded, equal);
             //System.out.printf("Improvement: %s", improvement/ qap.size());
             encoded = 0;
             string = 0;
             equal = 0;
-            improvement = 0.0;
-        }
+            //improvement = 0.0;
+
 
     }
 

@@ -2,7 +2,7 @@ package hmi.qam.matcher;
 
 /**
  * Attribute is a pair of Strings (name, value)
- * A list of attributes is attached to the AnswerTypes of a Dialog
+ * A list of attributes is attached to the AnswerTypes of a Dialogs
  *
  */
 public class Attribute{

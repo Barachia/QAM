@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
+import info.debatty.java.stringsimilarity.Cosine;
 import org.apache.commons.lang3.tuple.Pair;
 
 /**
@@ -42,7 +43,7 @@ public class QA {
    */
   public static void main(String[] args) throws IOException{
       //String filename = System.getProperty("user.dir") + "\\QA.xml";
-      String filename = "D:\\Data\\QA Alice\\alice_questions.xml";
+      String filename = "D:\\Data\\QA\\alice_questions.xml";
       String dr_file = "defaultanswers.txt";
       QA tr = new QA(filename, dr_file);
       Scanner scanner = new Scanner(System.in);
@@ -52,7 +53,8 @@ public class QA {
       while(scanner.hasNextLine() && query.toLowerCase() != "exit"){
           query = scanner.nextLine();
 
-        Pair<Dialog, Double> match = tr.store.getBestMatchingDialogAndScore(query);
+        Pair<Dialogs, Double> match = tr.store.getBestMatchingDialogAndScore(query,"wcmu",false, new Cosine(),3);
+        List<Pair<Dialogs,Double>> queries = tr.store.retrieveQueries(query);
         String bestQuery;
         String answer;
         if (match.getKey() == null) {
@@ -71,7 +73,7 @@ public class QA {
             }
         }
         //writer.write(answer + "\n");
-        //List<Pair<Dialog, Double>> queries = tr.store.retrieveQueries(query);
+        //List<Pair<Dialogs, Double>> queries = tr.store.retrieveQueries(query);
         //System.out.println("Queries and scores: " + queries.get(0).getLeft() + queries.get(0).getRight().toString());
         System.out.println("Best match query: " + bestQuery);
         System.out.println("Score: " + match.getValue());
@@ -84,16 +86,16 @@ public class QA {
     return this.store.bestMatch(query, type, value);
   }
 
-  private Dialog findMatchingAnswer(String query) {
+  private Dialogs findMatchingAnswer(String query) {
     return this.store.getBestMatchingDialog(query);
   }
 
-  private String returnAnswer(Dialog sentence, String type, String value) {
+  private String returnAnswer(Dialogs sentence, String type, String value) {
     return this.store.answerString(sentence, type, value);
   }
 
   public String findAndReturn(String query, String type, String value) {
-    Dialog d = this.findMatchingAnswer(query);
+    Dialogs d = this.findMatchingAnswer(query);
     if(type == null) {
       type = "type";
     }

@@ -2,7 +2,7 @@ package hmi.qam.matcher;
 import java.util.*;
 
 /**
- * AnswerType of a Dialog is an answer String with a set of attribute names and value pairs
+ * AnswerType of a Dialogs is an answer String with a set of attribute names and value pairs
  */
 public class AnswerType{
 

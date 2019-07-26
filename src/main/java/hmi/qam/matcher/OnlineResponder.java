@@ -98,15 +98,15 @@ public class OnlineResponder {
                         if(type.equals("final")){
                             previousQuery = query;
                             //System.out.println("Query: " + query);
-                            Pair<Dialog, Double> match = null;
+                            Pair<Dialogs, Double> match = null;
                             try {
-                                match = store.getBestMatchingDialogAndScore(query, false,true, new JaroWinkler());
+                                match = store.getBestMatchingDialogAndScore(query, "grapheme",true, new JaroWinkler(),0);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
-                            Pair<Dialog, Double> encoded = null;
+                            Pair<Dialogs, Double> encoded = null;
                             try {
-                                encoded = store.getBestMatchingDialogAndScore(query, true, true, new JaroWinkler());
+                                encoded = store.getBestMatchingDialogAndScore(query, "dm", true, new JaroWinkler(),0);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -135,7 +135,7 @@ public class OnlineResponder {
                                 }
                             }
                             //writer.write(answer + "\n");
-                            //List<Pair<Dialog, Double>> queries = tr.store.retrieveQueries(query);
+                            //List<Pair<Dialogs, Double>> queries = tr.store.retrieveQueries(query);
                             //System.out.println("Queries and scores: " + queries.get(0).getLeft() + queries.get(0).getRight().toString());
                             logger.info("Question: " + query);
                             logger.debug("Best match query: (U) {} and (E) {} \n",bestQuery, encoded_query);

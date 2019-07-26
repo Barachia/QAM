@@ -5,6 +5,7 @@ import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import edu.stanford.nlp.util.ConfusionMatrix;
+import hmi.qam.encode.Weight;
 import org.apache.commons.codec.language.DoubleMetaphone;
 import org.apache.commons.text.similarity.CosineDistance;
 import org.apache.commons.text.similarity.CosineSimilarity;
@@ -23,10 +24,9 @@ import java.util.stream.Collectors;
 
 public class Encode {
 
-    private final Map<String, Double> initialWeights;
-    private final Map<String, Double> finalWeights;
     private Metaphone3 m3;
     private DoubleMetaphone m2;
+    private Weight weight;
 
     private Analyzer analyzer;
 
@@ -45,16 +45,12 @@ public class Encode {
         this.phones = CMUDict.getPhones();
         this.symbols = CMUDict.getSymbols();
         this.vp = CMUDict.getVp();
-        this.initialConsonants = this.loadMatrix("consonant/initialConsonantARPA.csv");
-        this.finalConsonants = this.loadMatrix("consonant/finalConsonantARPA.csv");
-        this.initialWeights = this.weights(this.initialConsonants);
-        this.finalWeights = this.weights(this.finalConsonants);
         analyzer = new StandardAnalyzer();
     }
 
 
     /**
-     * Set DoubleMetaphone with variable length
+     * Set M2 with variable length
      * @param text, the text to encode
      * @return, the M2 encoded string of the original text
      */
@@ -181,37 +177,18 @@ public class Encode {
     }
 
     /**
-     * TODO
-     * @param text
-     * @return
-     */
-    private String weighted(String text){
-        for(List<String> predInitCon : this.initialConsonants){
-            for(String actualInitCon : predInitCon){
-
-            }
-        }
-        //Check for initial phoneme if there is a match.
-        //If there is a match, assign a weight.
-        //If not, then weight remains 1.
-        //Check for every other phoneme if there is a match.
-        String s = "";
-        return s;
-    }
-
-    /**
      * Helper for converting a full sentence to a CMU phonetic representation (Oct, 2018)
      * @param sentence, the sentence to convert
      * @return the phonetic representation
      */
     public String getCMUDictSentence(String sentence){
         String cmuPhonetic = "";
-        StringTokenizer tokenizer = new StringTokenizer(sentence);
+        StringTokenizer tokenizer = new StringTokenizer(sentence.trim().toLowerCase());
         while(tokenizer.hasMoreTokens()){
             String word = tokenizer.nextToken();
             cmuPhonetic = cmuPhonetic + " " + dict.get(word);
         }
-        return cmuPhonetic;
+        return cmuPhonetic.trim();
     }
 
     /**
@@ -240,37 +217,62 @@ public class Encode {
         return cmuPhoneticSentence;
     }
 
-    private List<List<String>> loadMatrix(String filename){
-        List<List<String>> lines = new ArrayList();
-        InputStreamReader reader = new InputStreamReader(Encode.class.getClassLoader().getResourceAsStream(filename), StandardCharsets.UTF_8);
-        CSVParser parser = new CSVParserBuilder()
-                .withSeparator(';')
-                .build();
-        try (CSVReader csvReader = new CSVReaderBuilder(reader)
-                .withCSVParser(parser)
-                .build();) {
-            String[] values;
-            while ((values = csvReader.readNext()) != null) {
-                lines.add(Arrays.asList(values));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return  lines;
-    }
 
-    private Map<String, Double> weights(List<List<String>> matrix){
-        Map<String,Double> weights = new HashMap();
-        List<String> labels = matrix.get(0);
-        for(int i=1;i<matrix.size();i++){
-            List<String> row = matrix.get(i).subList(1,matrix.size());
-            double sum = row.stream().collect(Collectors.summingInt(string -> Integer.parseInt(string)));
-            double tp = Double.valueOf(row.get(i-1));
-            weights.put(labels.get(i), tp / sum);
+    /**
+     * Compute the weights for the phonetic characters
+     * @param word, which should be in ARPA representation the word
+     * @return the weights in order of the characters
+     */
+    private List<Double> getWeights(String word){
+        List<Double> weights = new ArrayList();
+        StringTokenizer tokenizer = new StringTokenizer(word);
+        if(tokenizer.hasMoreTokens()){
+            String initial = tokenizer.nextToken();
+            double weight = 1.0;
+            if(this.getWeight(initial,true) != null){
+                    weight = this.getWeight(initial,true);
+            }
+            weights.add(weight);
+        }
+        while(tokenizer.hasMoreTokens()){
+            String mid = tokenizer.nextToken();
+            double weight = 1.0;
+            if(this.getWeight(mid,false)!=null){
+                weight = this.getWeight(mid,false);
+            }
+            weights.add(weight);
         }
         return weights;
+    }
+
+    /**
+     * Compute the weight for one phonetic character
+     * @param character, the character to retrieve the weight for
+     * @param initial, if it's an initial consonant
+     * @return the weight for the specific character
+     */
+    public Double getWeight(String character, boolean initial){
+        double sum = 0;
+        double counter = 0;
+        StringTokenizer tokenizer = new StringTokenizer(character);
+        while(tokenizer.hasMoreTokens()){
+            double weight = 1.0;
+            counter++;
+            String s = tokenizer.nextToken();
+            if(initial){
+                if(this.weight.getInitialWeights().get(s) != null){
+                    weight = this.weight.getInitialWeights().get(s);
+                }
+                sum = sum + weight;
+            }
+            else{
+                if(this.weight.getFinalWeights().get(s) != null){
+                    weight = this.weight.getFinalWeights().get(s);
+                }
+                sum = sum + weight;
+            }
+        }
+        return sum/counter;
     }
 
     /**
@@ -292,23 +294,14 @@ public class Encode {
      * @return the weight, based on the work of Woods et al. (2009)
      */
     public double weightedSimilarity(List<String> predicted, List<String> actual){
-        //CosineDistance distance = new CosineDistance();
-        //JaccardSimilarity jaccard = new JaccardSimilarity();
         double weight = 1;
         int size = Math.min(predicted.size(),actual.size());
         for(int i=0;i<size;i++){
             String phoneme = predicted.get(i);
-            //String actualPhoneme = actual.get(i);
-            if(this.initialWeights.containsKey(phoneme)){
-                weight = this.initialWeights.get(phoneme);
+            if(this.weight.getInitialWeights().containsKey(phoneme)){
+                weight = this.weight.getInitialWeights().get(phoneme);
             }
-            //similarity = similarity * weight;
         }
-        //String p =  predicted.stream().map(String::valueOf).collect(Collectors.joining());
-        //String a = actual.stream().map(String::valueOf).collect(Collectors.joining());
-        //double similarity = weight * (1-distance.apply(p,a));
-        //double similarity = weight * jaccard.apply(p,a);
-        //return similarity;
         return weight;
     }
 
@@ -365,6 +358,8 @@ public class Encode {
         String actual = "what did the white rabbit say";
         String cmuPredicted = encode.getCMUDictSentence(predicted);
         String cmuActual = encode.getCMUDictSentence(actual);
+        String dmPredicted = encode.getDoubleMetaphoneSentence(predicted);
+        String dmActual = encode.getDoubleMetaphoneEncoding(actual);
         //List<String> cmuWeightedPredicted = encode.getCMUDictSentenceList(predicted);
         //List<String> cmuWeightedActual = encode.getCMUDictSentenceList(actual);
         //List<List<String>> cmuWeightedPredictedSentence = encode.getCMUDictSentenceWordList(predicted);
