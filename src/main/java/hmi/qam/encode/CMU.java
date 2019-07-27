@@ -21,6 +21,13 @@ public class CMU implements PhonemeEncoderInterface {
         this.vp = CMUDict.getVp();
     }
 
+    public CMU(Map<String,String> dict, Map<String,String> phones, List<String> symbols, Map<String,String> vp){
+        this.dict = dict;
+        this.phones = phones;
+        this.symbols = symbols;
+        this.vp = vp;
+    }
+
     @Override
     public String getEncoded(String sentence) {
         String cmuPhonetic = "";

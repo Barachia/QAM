@@ -7,7 +7,8 @@
         </answerlist>
         <questionlist>
             <question>who wrote Alice in Wonderland</question>
-            <question>tell me about the author</question>            
+            <question>tell me about the author</question>
+            <question>who is the author of the book</question>
         </questionlist>
     </dialog>
     <dialog id="0001">
@@ -221,7 +222,8 @@
         </answerlist>
         <questionlist>            
             <question>was the book based on a true story</question> 
-            <question>how did the author come up with the idea of the book</question>   
+            <question>how did the author come up with the idea of the book</question>
+            <question>was Alice based on the author's life</question>
         </questionlist>
     </dialog>
     <dialog id="0025">
@@ -328,6 +330,7 @@
         </answerlist>
         <questionlist>
             <question>what did the rabbit say to itself</question>
+            <question>what did the white rabbit say</question>
         </questionlist>
     </dialog>
     <dialog id="0038">
@@ -353,6 +356,7 @@
         <questionlist>
             <question>do you know any more cool facts</question>
             <question>was there another movie after</question>
+            <question>can you tell me about movies of alice in wonderland</question>
         </questionlist>
     </dialog>
     <dialog id="0041">
@@ -385,6 +389,7 @@
         </answerlist>
         <questionlist>
             <question>i would like to know something about Alice</question>
+            <question>how old is alice</question>
         </questionlist>
     </dialog>
     <dialog id="0045">
@@ -492,14 +497,6 @@
             <question>I would like to know something about the queen</question>
         </questionlist>
     </dialog>
-    <dialog id="0057">
-        <answerlist>            
-            <answer type="certain">the queen wants to convict Alice</answer>
-        </answerlist>
-        <questionlist>
-            <question>what happens with the queen</question>
-        </questionlist>
-    </dialog>
     <dialog id="0058">
         <answerlist>            
             <answer type="certain">Alice did nothing wrong</answer>
@@ -531,6 +528,7 @@
         <questionlist>
             <question>why does the Queen want to convict Alice</question>
             <question>what does the Cheshire cat do</question>
+            <question>why was the queen angry with alice</question>
         </questionlist>
     </dialog>
     <dialog id="0062">
@@ -708,6 +706,7 @@
         </answerlist>
         <questionlist>
             <question>what does the Cheshire cat look like</question>
+            <question>is the Cheshire cat the cat with a grin</question>
         </questionlist>
     </dialog>
     <dialog id="0084">
@@ -806,12 +805,28 @@
             <question>where did Lewis Carroll work</question>
         </questionlist>
     </dialog>
-    <dialog id="0095">
+    <dialog id="0096">
         <answerlist>            
             <answer type="certain">the White Rabbit tries to save Alice</answer>
         </answerlist>
         <questionlist>
             <question>what happens during the trial</question>            
+        </questionlist>
+    </dialog>
+    <dialog id="0097">
+        <answerlist>
+            <answer type="certain">the White Rabbit tries to save Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>what happens during the trial</question>
+        </questionlist>
+    </dialog>
+    <dialog id="0098">
+        <answerlist>
+            <answer type="certain">the queen wants to convict Alice</answer>
+        </answerlist>
+        <questionlist>
+            <question>what happens with the queen</question>
         </questionlist>
     </dialog>
 

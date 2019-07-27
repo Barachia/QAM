@@ -1,6 +1,5 @@
 package hmi.qam.util;
 
-import SpeechAPIDemo.ExampleApp;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.ngram.NGramTokenizer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;

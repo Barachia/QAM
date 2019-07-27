@@ -9,7 +9,7 @@ import java.util.List;
 public class Dialog {
 
     @XmlAttribute(name="id")
-    private int id;
+    private String id;
 
     private List<String> questions;
 
@@ -17,7 +17,7 @@ public class Dialog {
     private List<String> answers;
 
     public Dialog(){
-        id = 0;
+        id = "0000";
         this.questions = new ArrayList<>();
         this.answers = new ArrayList<>();
     }
@@ -43,7 +43,7 @@ public class Dialog {
         return this.answers;
     }
 
-    public int getId(){
+    public String getId(){
         return this.id;
     }
 }

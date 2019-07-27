@@ -22,15 +22,91 @@ public class TestEncode {
     }
 
     private static void testQuestions(){
-        String questions = "qa/alice_questions.xml";
+        //String questions = "qa/alice_questions.xml";
+        String questions ="qa/hai_alice_questions.xml";
         TestEncode test = new TestEncode();
         M2 code = new M2();
         SetBasedStringSimilarity cosine = new Cosine();
         dialogRoot root = test.loadDialogRoot(questions);
-        String a = "tell me about the white rabbit";
-        Map<String,Double> result = test.testQuestions(a, root, cosine, code);
+        String a = "what happened after alice fell";
+        Map<String,String> testQuestions = new HashMap();
+        //Map<String,String> testQuestions = test.questions();
+        testQuestions.put(a,"0043");
+        //Map<String,Double> result = test.testQuestions(a, root, cosine, code);
+        //int rank = test.retrieveRank(result,"0043");
         Map<String, Map<String,Double>> results = test.testAllSimilarities(a,root);
-        System.out.println("done");
+        Map<String,Integer> method = test.bestRank(results,"0043");
+        Map<String, Map<String,Integer>> bestMethods = test.testQuestionRankings(root);
+        System.out.println("Method: " + method);
+
+    }
+
+    private Map<String,Map<String,Integer>> testQuestionRankings(dialogRoot root){
+        Map<String,Map<String,Integer>> bestResults = new HashMap();
+        Map<String,String> questions = this.questions();
+        for(String question : questions.keySet()){
+            Map<String, Map<String,Double>> results = this.testAllSimilarities(question,root);
+            Map<String,Integer> method = this.bestRank(results,questions.get(question));
+            //System.out.println("Method: " + method);
+            bestResults.put(question,method);
+        }
+        return bestResults;
+    }
+
+    private Map<String,String> questions(){
+        Map<String,String> questions = new HashMap();
+        //String q1 = "How long was Alice falling?";
+        String q1 = "yes hello how long was alice folly";
+        String q2 = "Who is the author of the book?";
+        String q3 = "Was Alice based on the author’s life?";
+        String q4 = "Why was the Queen angry with Alice?";
+        String q5 = "What did the White Rabbit say";
+        String q6 = "Tell me about the orange marmalade";
+        String q7 = "What other books did the author write";
+        String q8 = "How old is Alice?";
+        String q9 = "Is the Cheshire Cat the cat with a grin?";
+        String q10 = "Can you tell me about movies of Alice in Wonderland?";
+        questions.put(q1,"0011");
+        questions.put(q2,"0017");
+        questions.put(q3,"0024");
+        questions.put(q4,"0061");
+        questions.put(q5,"0037");
+        questions.put(q6,"0026");
+        questions.put(q7,"0014");
+        questions.put(q8,"0044");
+        questions.put(q9,"0083");
+        questions.put(q10,"0040");
+        return questions;
+    }
+
+    private Map<String,Integer> bestRank(Map<String,Map<String,Double>> list, String index){
+        String bestMethod = "grapheme";
+        Integer bestRank = -1;
+        Map<String,Integer> map = new HashMap();
+        for(String method : list.keySet()){
+            int rank = retrieveRank(list.get(method),index);
+            if(rank >bestRank){
+                bestRank = rank;
+                bestMethod = method;
+            }
+        }
+        map.put(bestMethod,bestRank);
+        return map;
+    }
+
+    private int retrieveRank(Map<String, Double> list, String index){
+        int rank = -1;
+        int count = list.size();
+        Iterator<String> it = list.keySet().iterator();
+        while(it.hasNext()){
+            String temp = it.next();
+            if(temp.equals(index)){
+                rank = count;
+                break;
+            }
+            count--;
+        }
+        return rank;
     }
 
 
@@ -89,7 +165,7 @@ public class TestEncode {
      * @return a hashmap containing the questions and their score
      */
     public Map<String,Double> testQuestions(String question, dialogRoot store, SetBasedStringSimilarity s, PhonemeEncoderInterface code){
-        Map<String,Double> similarities = new HashMap();
+        Map<String,Double> similarities = new TreeMap();
         for(Dialog other : store.getDialogs()){
             String a = question;
             double max = 0;
@@ -100,7 +176,7 @@ public class TestEncode {
                     max = code.getSimilarity(s,a,b);
                 }
             }
-            similarities.put(b,max);
+            similarities.put(other.getId(),max);
         }
         return similarities.entrySet()
                 .stream()
@@ -130,7 +206,7 @@ public class TestEncode {
                     max = ToolSet.similarity(a,b);
                 }
             }
-            similarities.put(b,max);
+            similarities.put(other.getId(),max);
         }
         return similarities.entrySet()
                 .stream()

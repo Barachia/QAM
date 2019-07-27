@@ -11,6 +11,7 @@ public class WeightedCMU extends CMU {
         this.weight = weight;
     }
 
+
     @Override
     public double getSimilarity(SetBasedStringSimilarity s, String target, String real) {
         return weight.getSimilarity(s,this,target,real);
